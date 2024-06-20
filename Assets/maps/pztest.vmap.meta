@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "pztest",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "pztest",
+      "Tags": null,
+      "Schema": 0,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "fpopium.dev_grid_03#55241"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/pztest.vmap"
+      }
+    }
+  }
+}
