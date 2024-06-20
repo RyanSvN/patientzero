@@ -43,7 +43,6 @@
       "Name": "Camera",
       "Position": "-267.452,-379.653,297.7903",
       "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -141,7 +140,7 @@
       "__guid": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
       "Flags": 0,
       "Name": "TopDownGPC",
-      "Position": "-187.09,-4.688005,14.40472",
+      "Position": "-187.09,-4.688005,60.24152",
       "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
@@ -156,6 +155,7 @@
             "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
             "component_type": "CitizenAnimationHelper"
           },
+          "Armor": 0,
           "Camera": {
             "_type": "gameobject",
             "go": "2a9c43cb-e7de-42b0-9cb7-45e526b0dc13"
@@ -168,8 +168,15 @@
             "component_type": "CharacterController"
           },
           "CrouchSpeed": 120,
+          "Currency": 0,
           "EyePosition": "0,0,0",
+          "Health": 100,
+          "Inventory": [
+            "weapon_pistol"
+          ],
           "JumpHeight": 300,
+          "MaxArmor": 100,
+          "MaxHealth": 100,
           "RunSpeed": 300,
           "WalkSpeed": 200
         },
@@ -216,7 +223,27 @@
           "IsTrigger": false,
           "Radius": 5.799993,
           "Start": "0,0,6.999996",
-          "Static": true
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "0b8e1edf-cf84-4ade-abab-9c09849b30ca",
+          "__enabled": false,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": [
@@ -281,6 +308,7 @@
             "go": "10629c75-2c00-4772-a832-188582542bf8",
             "component_type": "NavMeshAgent"
           },
+          "damage": 10,
           "player": {
             "_type": "gameobject",
             "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e"
@@ -302,11 +330,11 @@
           "__guid": "2a1b0745-a2d1-4d3d-819f-6eb60568a23b",
           "__enabled": false,
           "AngularDamping": 0,
-          "Gravity": true,
+          "Gravity": false,
           "LinearDamping": 0,
           "Locking": {},
           "MassOverride": 0,
-          "MotionEnabled": true,
+          "MotionEnabled": false,
           "RigidbodyFlags": 0,
           "StartAsleep": false
         },
@@ -314,55 +342,58 @@
           "__type": "Sandbox.BoxCollider",
           "__guid": "ae33f2d1-2abf-493e-a827-fd0073992c27",
           "Center": "0,0,0",
-          "IsTrigger": false,
+          "IsTrigger": true,
           "Scale": "50,50,50",
           "Static": false
         }
-      ],
-      "Children": [
+      ]
+    },
+    {
+      "__guid": "469e0f14-f710-48e4-85f9-426469c177b5",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "309.1657,1149.848,217.6281",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
         {
-          "__guid": "f46ed99b-6d0a-4b63-bb47-391946dba9c2",
-          "Flags": 0,
-          "Name": "Cube",
-          "Position": "-31.54118,47.31829,4.374959",
-          "Rotation": "-0.7071067,0,0,0.7071068",
-          "Scale": "0.2999999,0.3,0.5",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "6449b7ea-ce34-4152-8a8d-54943e13f6b8",
-              "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/dev/red/dev_red_10.vmat",
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "ca4b8f08-85e6-4a25-882c-77ddb0f543d8",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
         },
         {
-          "__guid": "dc93d3f2-bcf0-42dc-95b8-05ddd9999cb0",
-          "Flags": 0,
-          "Name": "Cube (1)",
-          "Position": "27.5766,47.31847,4.374952",
-          "Rotation": "-0.7071067,0,0,0.7071068",
-          "Scale": "0.2999999,0.3,0.5",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1a5d2e86-8348-4436-98b5-4b4418ef624f",
-              "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/dev/red/dev_red_10.vmat",
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
+          "__type": "PlayerHUD",
+          "__guid": "97c42fdc-3516-43b9-b6f8-10824fb19cbc",
+          "Player": {
+            "_type": "component",
+            "component_id": "0b6d73f8-a579-48cf-9c44-5ee7c0d395d7",
+            "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
+            "component_type": "TopDownGPC"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-40.8187,-95.42053,30.30743",
+      "Scale": "0.4892433,0.4892433,0.4892433",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "14663669-2674-4a2f-992e-479ee2f403db",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.70698,0.6605,0.00986,1"
         }
       ]
     }
@@ -390,7 +421,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-20T17:42:20.8643427\u002B01:00",
+  "LastSaved": "2024-06-20T20:48:15.2702606\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "tiowevolve.dev_red_10"

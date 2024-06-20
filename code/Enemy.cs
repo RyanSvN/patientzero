@@ -2,19 +2,34 @@ using System;
 using System.Collections;
 using Sandbox;
 
-public sealed class Enemy : Component
+public sealed class Enemy : Component, Component.ITriggerListener
 {
 	[Property]
 	public GameObject player { get; set; }
 
-	private float speed = 1f; // Adjust the speed as needed
+	//Zombie Damage
+	[Property]
+	public float damage { get; set; } = 10f;
 
 
 	[Property]
 	public NavMeshAgent agent;
+
+	public void OnTriggerEnter( Collider other )
+	{
+		var player = other.Components.Get<TopDownGPC>();
+		if ( player != null)
+		{
+			player.Health -= damage;
+			player.Health = Math.Clamp ( player.Health, 0, player.MaxHealth);
+		}
+	}
+
+	public void OnTriggerExit( Collider other )
+	{
+		Log.Info(other);
+	}
 	
-
-
 	protected override void OnStart()
 	{	
 
@@ -28,7 +43,7 @@ public sealed class Enemy : Component
         }
 		else
 		{
-			Log.Info("Hello!");
+			// Log.Info("Hello!");
 		}
 
 		var enemyLoc = Transform.LocalPosition;
@@ -45,9 +60,7 @@ public sealed class Enemy : Component
 
 		// Transform.LocalRotation = Rotation.LookAt(playerLoc);
 		var velocity = agent.Velocity;
-		Log.Info(velocity);
-
-		
+		// Log.Info(velocity); 
 	}
 
 }

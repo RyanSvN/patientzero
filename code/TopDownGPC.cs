@@ -7,6 +7,38 @@ using Sandbox.Citizen;
 /// </summary>
 public sealed class TopDownGPC : Component
 {
+	/// PLAYER STATS (HEALTH, ARMOR, OTHER)
+	[Property] 
+	public float Health { get; set; } = 100f;
+
+	[Property] 
+	public float MaxHealth { get; set; } = 100f;
+
+	[Property] 
+	public float Armor { get; set; } = 0f;
+
+	[Property] 
+	public float MaxArmor { get; set; } = 100f;
+
+	[Property] 
+	public float Currency { get; set; } = 0;
+	
+
+	public TimeSince TimeAlive { get; set; } = 0f;
+
+	/// INVENTORY
+	[Property] 
+	public List<string> Inventory { get; set; } = new List<string>
+	{
+		"weapon_pistol"
+	};
+
+	public int ActiveSlot = 0;
+	public int Slots => 9;
+
+
+
+
 	[Property]
 	[Category( "Components" )]
 	public GameObject Camera { get; set; }
