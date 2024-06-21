@@ -49,4 +49,7 @@ public sealed class EnemyManager : Component
 			Console.WriteLine($"Iteration {i + 1}");
 		}
 	}
+
+
+
 }
