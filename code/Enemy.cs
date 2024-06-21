@@ -11,6 +11,15 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	[Property]
 	public float damage { get; set; } = 10f;
 
+	[Property] 
+	public float Health { get; set; } = 100f;
+
+	[Property] 
+	public float MaxHealth { get; set; } = 100f;
+
+	public TimeSince timeBeen { get; set; } = 0f;
+
+
 
 	[Property]
 	public NavMeshAgent agent;
@@ -36,7 +45,16 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	}
 
 	protected override void OnUpdate()
-	{
+	{	
+		Log.Info(Health);
+
+		if (Health <= 0)
+        {
+            GameObject.Destroy();
+			Log.Info("ZOMBIE DESTROYED!");
+            return;
+        }
+
 		if (player == null)
         {
             return; // Exit if no player is assigned
@@ -47,7 +65,7 @@ public sealed class Enemy : Component, Component.ITriggerListener
 		}
 
 		var enemyLoc = Transform.LocalPosition;
-		var enemyRot = Transform.LocalRotation.z;
+		var enemyRot = Transform.LocalRotation;
 		var playerLoc = player.Transform.LocalPosition;
 		
 		// Log.Info(enemyRot);
@@ -55,19 +73,9 @@ public sealed class Enemy : Component, Component.ITriggerListener
 
 		var direction = (playerLoc - enemyLoc);
 		// Transform.LocalPosition += direction * speed * Time.Delta;
-		if (direction != Vector3.Zero)
-        {
-            // Smoothly rotate towards the player
-            var targetRotation = Rotation.LookAt(direction);
-            Transform.Rotation = Rotation.Slerp(Transform.Rotation, targetRotation, 8f * Time.Delta);
-        }
 		
 	
 		agent.MoveTo( playerLoc );
-
-		Transform.Rotation = Rotation.Slerp (Transform.Rotation, Rotation.LookAt(direction), 8f * Time.Delta);		
-
-		
 
 		// Transform.LocalRotation = Rotation.LookAt(playerLoc);
 		var velocity = agent.Velocity;

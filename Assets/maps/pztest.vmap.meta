@@ -12,7 +12,9 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "fpopium.dev_grid_03#55241"
+        "fpopium.dev_grid_03#55241",
+        "facepunch.w_usp#33631",
+        "tiowevolve.dev_purple_01#53003"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/pztest.vmap"
