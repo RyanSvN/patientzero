@@ -125,7 +125,8 @@
           "MapName": "maps/pztest.vmap",
           "UseMapFromLaunch": false
         }
-      ]
+      ],
+      "Children": []
     },
     {
       "__guid": "3b1888f1-b5f0-48f6-bc73-7e39f68a7c50",
@@ -141,7 +142,6 @@
       "Name": "TopDownGPC",
       "Position": "-187.09,-4.688005,60.24152",
       "Tags": "player",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -396,7 +396,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/error.vmat",
+          "MaterialOverride": "materials/dev/red/dev_red_10.vmat",
           "Model": "models/zombie.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -665,7 +665,13 @@
         },
         {
           "__type": "EnemyManager",
-          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
+          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4",
+          "Zombie": {
+            "_type": "component",
+            "component_id": "2bfb57a4-2530-4516-bfd9-e5a00b59364d",
+            "go": "10629c75-2c00-4772-a832-188582542bf8",
+            "component_type": "Enemy"
+          }
         }
       ]
     }
