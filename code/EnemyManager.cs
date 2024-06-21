@@ -14,14 +14,42 @@ public sealed class EnemyManager : Component
 
 	protected override void OnStart()
 	{
-		var timer = Zombie.timeBeen;
-		// Log.Info(timer);
 
 	}
 
 	protected override void OnUpdate()
-	{
-		// Log.Info(timer);
+	{	
+		var timer = Zombie.timeBeen;
+		Log.Info(timer);
+		if (executionCount > MaxExecutions)
+		{
+			executionCount++;
+			Log.Info($"Execution {executionCount}:");
+
+			PerformSequence();
+
+			for (int i = 0; i < 10; i++)
+            {
+                // Simulate some work by printing the iteration number
+                Log.Info($"Iteration {i + 1}");
+            }
+		}
+		else
+		{	
+			Log.Info("Completed 10 executions. Timer stopped.");
+		}
 	}
+
+	private static void PerformSequence()
+    {
+        // Simulate some work by iterating 10 times
+        for (int i = 0; i < 10; i++)
+        {
+            // Simulate some work by printing the iteration number
+            Console.WriteLine($"Iteration {i + 1}");
+        }
+    }
+
+
 
 }

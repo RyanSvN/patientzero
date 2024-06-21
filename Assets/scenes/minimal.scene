@@ -142,7 +142,6 @@
       "Name": "TopDownGPC",
       "Position": "-187.09,-4.688005,60.24152",
       "Tags": "player",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -666,7 +665,13 @@
         },
         {
           "__type": "EnemyManager",
-          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
+          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4",
+          "Zombie": {
+            "_type": "component",
+            "component_id": "2bfb57a4-2530-4516-bfd9-e5a00b59364d",
+            "go": "10629c75-2c00-4772-a832-188582542bf8",
+            "component_type": "Enemy"
+          }
         }
       ]
     }
@@ -694,7 +699,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-21T17:46:20.3261566\u002B01:00",
+  "LastSaved": "2024-06-21T18:29:10.7487456\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "tiowevolve.dev_red_10"
