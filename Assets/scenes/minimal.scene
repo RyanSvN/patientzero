@@ -282,7 +282,7 @@
     {
       "__guid": "10629c75-2c00-4772-a832-188582542bf8",
       "Flags": 0,
-      "Name": "Cube",
+      "Name": "Zombie",
       "Position": "-426.295,-781.4303,83.32088",
       "Scale": "0.7,0.6999999,2",
       "Tags": "enemy",
@@ -341,10 +341,33 @@
         {
           "__type": "Sandbox.BoxCollider",
           "__guid": "ae33f2d1-2abf-493e-a827-fd0073992c27",
+          "__enabled": false,
           "Center": "0,0,0",
           "IsTrigger": true,
           "Scale": "50,50,50",
           "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "3602449e-6a28-4808-a377-5c4ec5fe31c6",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,41.80525,16.82832",
+          "Scale": "0.4330225,1,0.1195",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "615acf6d-a39a-4ce9-a0f8-9993e37d6df9",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     },
@@ -396,6 +419,51 @@
           "Tint": "0.70698,0.6605,0.00986,1"
         }
       ]
+    },
+    {
+      "__guid": "063f11fe-5849-4d6c-a116-fcba76c68906",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-151.2028,824.1442,31.97765",
+      "Scale": "0.4557585,0.4557585,0.4557585",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b5221e2b-4430-4556-bfb2-2d23ebd74bff",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SpawnManager",
+          "__guid": "aeb9d192-1fac-49db-ad87-0aae6b7958ff"
+        }
+      ]
+    },
+    {
+      "__guid": "82a75b56-d379-4e61-98ff-a57301ff728f",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-589.2215,-95.23685,8.877748",
+      "Scale": "0.2772021,0.2772021,0.2772021",
+      "Tags": "spawn_point",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "23315e97-a934-42f6-b469-cb431ee87405",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.17454,0.59535,0.05815,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -421,7 +489,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-20T20:48:15.2702606\u002B01:00",
+  "LastSaved": "2024-06-21T03:04:18.7687156\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "tiowevolve.dev_red_10"

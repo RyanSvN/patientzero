@@ -47,16 +47,27 @@ public sealed class Enemy : Component, Component.ITriggerListener
 		}
 
 		var enemyLoc = Transform.LocalPosition;
-		var enemyRot = Transform.LocalRotation;
+		var enemyRot = Transform.LocalRotation.z;
 		var playerLoc = player.Transform.LocalPosition;
 		
 		// Log.Info(enemyRot);
 		// Log.Info(playerLoc);
 
-		Vector3 direction = (playerLoc - enemyLoc);
+		var direction = (playerLoc - enemyLoc);
 		// Transform.LocalPosition += direction * speed * Time.Delta;
-
+		if (direction != Vector3.Zero)
+        {
+            // Smoothly rotate towards the player
+            var targetRotation = Rotation.LookAt(direction);
+            Transform.Rotation = Rotation.Slerp(Transform.Rotation, targetRotation, 8f * Time.Delta);
+        }
+		
+	
 		agent.MoveTo( playerLoc );
+
+		Transform.Rotation = Rotation.Slerp (Transform.Rotation, Rotation.LookAt(direction), 8f * Time.Delta);		
+
+		
 
 		// Transform.LocalRotation = Rotation.LookAt(playerLoc);
 		var velocity = agent.Velocity;
