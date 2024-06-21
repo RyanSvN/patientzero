@@ -4,9 +4,7 @@ using Sandbox;
 
 public sealed class Enemy : Component, Component.ITriggerListener
 {
-	[Property]
-	public GameObject player { get; set; }
-
+	public List<TopDownGPC> Players { get; set; }
 	//Zombie Damage
 	[Property]
 	public float damage { get; set; } = 10f;
@@ -45,9 +43,10 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	}
 
 	protected override void OnUpdate()
-	{	
-		Log.Info(Health);
-
+	{
+		
+		 FetchAndOrderPlayersByDistanceToZombie();
+		 
 		if (Health <= 0)
         {
             GameObject.Destroy();
@@ -55,31 +54,23 @@ public sealed class Enemy : Component, Component.ITriggerListener
             return;
         }
 
-		if (player == null)
+		if (Players.Count == 0)
         {
             return; // Exit if no player is assigned
         }
-		else
-		{
-			// Log.Info("Hello!");
-		}
 
 		var enemyLoc = Transform.LocalPosition;
-		var enemyRot = Transform.LocalRotation;
-		var playerLoc = player.Transform.LocalPosition;
+		var playerLoc = Players.First().Transform.LocalPosition;
 		
-		// Log.Info(enemyRot);
-		// Log.Info(playerLoc);
 
 		var direction = (playerLoc - enemyLoc);
-		// Transform.LocalPosition += direction * speed * Time.Delta;
-		
 	
 		agent.MoveTo( playerLoc );
-
-		// Transform.LocalRotation = Rotation.LookAt(playerLoc);
-		var velocity = agent.Velocity;
-		// Log.Info(velocity); 
 	}
-
+	private void FetchAndOrderPlayersByDistanceToZombie()
+	{
+		var playerList = Scene.GetAllComponents<TopDownGPC>();
+		var sortedPlayers = playerList.OrderBy(x => Vector3.DistanceBetween(Transform.LocalPosition,x.Transform.LocalPosition));
+		Players = sortedPlayers.ToList();
+	}
 }

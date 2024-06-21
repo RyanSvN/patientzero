@@ -5,7 +5,7 @@ using Sandbox.Citizen;
 /// A General Player component that handles the player's movement, camera, and animations.
 /// The plauer is in third-person view, over the right shoulder by default.
 /// </summary>
-public sealed class TopDownGPC : Component
+public sealed class TopDownGPC : Component, Component.ITriggerListener
 {
 	/// PLAYER STATS (HEALTH, ARMOR, OTHER)
 	[Property] 
@@ -35,9 +35,6 @@ public sealed class TopDownGPC : Component
 
 	public int ActiveSlot = 0;
 	public int Slots => 9;
-
-
-
 
 	[Property]
 	[Category( "Components" )]
@@ -116,7 +113,7 @@ public sealed class TopDownGPC : Component
 	protected override void OnUpdate() // Called on every frame
 	{
 		EyeAngles += Input.AnalogLook; // Add the analog look to the eye angles, which determinds how far the mouse moved in the last frame
-		EyeAngles = EyeAngles.WithPitch( MathX.Clamp( EyeAngles.pitch, -70f, 70f ) ); // Clamp the pitch of the eye angles to prevent the player from looking too far up or down
+		EyeAngles = EyeAngles.WithPitch( MathX.Clamp( EyeAngles.pitch, -0f, 0f ) ); // Clamp the pitch of the eye angles to prevent the player from looking too far up or down
 		Transform.Rotation = Rotation.FromYaw( EyeAngles.yaw ); // Set the rotation of the player to the eye angles yaw
 	}
 
@@ -130,8 +127,7 @@ public sealed class TopDownGPC : Component
 		{
 			IsRightShoulder = !IsRightShoulder;
 		}
-
-
+		
 		HandleMovement(); // Handle the player movement
 
 		HandlePlayerOnGround();
@@ -143,7 +139,6 @@ public sealed class TopDownGPC : Component
 			Animator.WithVelocity( Controller.Velocity ); // Set the velocity of the animator to the velocity of the controller (For animations like walking, running, etc.
 		}
 	}
-
 	private void HandleMovement()
 	{
 		float wishSpeed; // The speed the player wishes to move at
@@ -194,6 +189,22 @@ public sealed class TopDownGPC : Component
 		}
 		else
 			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta; // Apply gravity if the player is not on the ground
+	}
+	
+	public void OnTriggerEnter( Collider other  )
+	{
+		var otherObject = other.GameObject;
+
+		if ( otherObject.Tags.Contains( "gold" ) )
+		{
+			Log.Info( "BEFORE: " + Currency );
+			HandleCurrencyPickup();
+			Log.Info( "AFTER: " + Currency );
+		}
+	}
+	private void HandleCurrencyPickup()
+	{
+		Currency += 1;
 	}
 
 	protected override void OnStart() // Called when the component is first enabled
