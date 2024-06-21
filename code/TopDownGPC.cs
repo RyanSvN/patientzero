@@ -197,9 +197,7 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 
 		if ( otherObject.Tags.Contains( "gold" ) )
 		{
-			Log.Info( "BEFORE: " + Currency );
 			HandleCurrencyPickup();
-			Log.Info( "AFTER: " + Currency );
 		}
 	}
 	private void HandleCurrencyPickup()
@@ -216,8 +214,6 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
             EyePosition = new Vector3(0, 0, Controller.Height); // Set eye position to the height of the controller
 
 		}
-
-
 
 		if ( Components.TryGet<SkinnedModelRenderer>( out var model ) )
 		{ // Tries to get the SkinnedModelRenderer component from the player

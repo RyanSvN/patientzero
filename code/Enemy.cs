@@ -45,19 +45,19 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	protected override void OnUpdate()
 	{
 		
-		 FetchAndOrderPlayersByDistanceToZombie();
+		FetchAndOrderPlayersByDistanceToZombie();
 		 
 		if (Health <= 0)
-        {
-            GameObject.Destroy();
+		{
+			GameObject.Destroy();
 			Log.Info("ZOMBIE DESTROYED!");
-            return;
-        }
+			return;
+		}
 
 		if (Players.Count == 0)
-        {
-            return; // Exit if no player is assigned
-        }
+		{
+			return; // Exit if no player is assigned
+		}
 
 		var enemyLoc = Transform.LocalPosition;
 		var playerLoc = Players.First().Transform.LocalPosition;

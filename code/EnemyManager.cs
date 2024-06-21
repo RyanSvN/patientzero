@@ -6,8 +6,8 @@ public sealed class EnemyManager : Component
 {
 
 
-    private static int executionCount = 0;
-    private const int MaxExecutions = 10;
+	private static int executionCount = 0;
+	private const int MaxExecutions = 10;
 
 	[Property] 
 	public Enemy Zombie { get; set; }
@@ -29,10 +29,10 @@ public sealed class EnemyManager : Component
 			PerformSequence();
 
 			for (int i = 0; i < 10; i++)
-            {
-                // Simulate some work by printing the iteration number
-                Log.Info($"Iteration {i + 1}");
-            }
+			{
+				// Simulate some work by printing the iteration number
+				Log.Info($"Iteration {i + 1}");
+			}
 		}
 		else
 		{	
@@ -41,15 +41,12 @@ public sealed class EnemyManager : Component
 	}
 
 	private static void PerformSequence()
-    {
-        // Simulate some work by iterating 10 times
-        for (int i = 0; i < 10; i++)
-        {
-            // Simulate some work by printing the iteration number
-            Console.WriteLine($"Iteration {i + 1}");
-        }
-    }
-
-
-
+	{
+		// Simulate some work by iterating 10 times
+		for (int i = 0; i < 10; i++)
+		{
+			// Simulate some work by printing the iteration number
+			Console.WriteLine($"Iteration {i + 1}");
+		}
+	}
 }
