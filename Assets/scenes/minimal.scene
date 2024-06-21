@@ -396,7 +396,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/dev/red/dev_red_10.vmat",
+          "MaterialOverride": "materials/error.vmat",
           "Model": "models/zombie.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -412,11 +412,7 @@
           },
           "damage": 10,
           "Health": 100,
-          "MaxHealth": 100,
-          "player": {
-            "_type": "gameobject",
-            "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e"
-          }
+          "MaxHealth": 100
         },
         {
           "__type": "Sandbox.NavMeshAgent",
@@ -484,9 +480,10 @@
     {
       "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
       "Flags": 0,
-      "Name": "Cube",
+      "Name": "Currency",
       "Position": "-40.8187,-95.42053,30.30743",
       "Scale": "0.4892433,0.4892433,0.4892433",
+      "Tags": "gold",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -498,6 +495,14 @@
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "0.70698,0.6605,0.00986,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "5bb19dd0-babe-4339-a86e-5d27cd7d7ab5",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     },
@@ -665,13 +670,7 @@
         },
         {
           "__type": "EnemyManager",
-          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4",
-          "Zombie": {
-            "_type": "component",
-            "component_id": "2bfb57a4-2530-4516-bfd9-e5a00b59364d",
-            "go": "10629c75-2c00-4772-a832-188582542bf8",
-            "component_type": "Enemy"
-          }
+          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
         }
       ]
     }
@@ -699,7 +698,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-21T18:07:43.2281468\u002B01:00",
+  "LastSaved": "2024-06-22T00:48:27.035829\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
