@@ -4,14 +4,14 @@
 
 <root>
 	<div class="vitals">
-	<p>Currency: @Player.Currency</p>
+	<p>Currency: @LocalPlayer.Currency</p>
 	<p>@GetTimeString()</p>
 	</div>
 
 	<div class="healthbars">
 		<div class="healthbar">
 			<div class="inner">
-				<div class="fill" style="width: @(Player.Health / Player.MaxHealth * 100f)%"></div>
+				<div class="fill" style="width: @(LocalPlayer.Health / LocalPlayer.MaxHealth * 100f)%"></div>
 			</div>
 		</div>
 	</div>
@@ -21,12 +21,21 @@
 {
 
 
-[Property] TopDownGPC Player { get; set; }
+	TopDownGPC LocalPlayer { get; set; }
+	
+	protected override void OnFixedUpdate()
+	{
+		if ( !LocalPlayer.IsValid() )
+		{
+			LocalPlayer = Scene.GetAllComponents<TopDownGPC>().FirstOrDefault( p => p.Network.OwnerConnection == Connection.Local );
+		}
+	}
+
 
 
 	string GetTimeString()
 	{
-		var time = Player.TimeAlive;
+		var time = LocalPlayer.TimeAlive;
 		var minutes = (int)time / 60;
 		var seconds = (int)time % 60;
 		return $"{minutes:00}:{seconds:00}";
@@ -34,7 +43,7 @@
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine(Player.Currency, Player.Health, @GetTimeString());
+		return System.HashCode.Combine(LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString());
 	}
 
 }
