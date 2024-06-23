@@ -1,5 +1,5 @@
 {
-  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "__guid": "7f4c5617-e7c7-4f77-aa89-bc9671d2c9d5",
   "GameObjects": [
     {
       "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
@@ -449,6 +449,201 @@
       ]
     },
     {
+      "__guid": "6373d59a-1db4-4e6d-8018-b5e44b82ae93",
+      "Flags": 0,
+      "Name": "Zombie (1)",
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "42a8afb2-295a-456b-99c5-d7f9d9c46d67",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/error.vmat",
+          "Model": "models/zombie.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Enemy",
+          "__guid": "0d9113f1-c32a-4d49-9e37-5c12d2085c0c",
+          "agent": {
+            "_type": "component",
+            "component_id": "23e2a1b6-a506-444b-a695-8b20f2770420",
+            "go": "6373d59a-1db4-4e6d-8018-b5e44b82ae93",
+            "component_type": "NavMeshAgent"
+          },
+          "damage": 10,
+          "Health": 100,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "23e2a1b6-a506-444b-a695-8b20f2770420",
+          "Acceleration": 60,
+          "Height": 160.30016,
+          "MaxSpeed": 100,
+          "Radius": 27.200134,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "381944f3-6cdc-4aa3-a06c-71820b1ec58c",
+          "__enabled": false,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "e9d88cb5-83e1-45ef-aee6-52cbd6340114",
+          "Center": "0,0,81.00005",
+          "IsTrigger": true,
+          "Scale": "44.30003,74.99981,160.8997",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "e8b07440-b5e4-409c-b4d9-0d1f4c5a46af",
+      "Flags": 0,
+      "Name": "Zombie (2)",
+      "Position": "3.714069,-1040.947,5.731064",
+      "Tags": "enemy",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "8baa46ab-207a-41b0-b4a0-902b77f00b16",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/error.vmat",
+          "Model": "models/zombie.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Enemy",
+          "__guid": "540ce3cf-2930-452a-b84d-cb88baf27068",
+          "agent": {
+            "_type": "component",
+            "component_id": "a28b5151-5baf-4abe-8e1e-c72df208f5d7",
+            "go": "e8b07440-b5e4-409c-b4d9-0d1f4c5a46af",
+            "component_type": "NavMeshAgent"
+          },
+          "damage": 10,
+          "Health": 100,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "a28b5151-5baf-4abe-8e1e-c72df208f5d7",
+          "Acceleration": 60,
+          "Height": 160.30016,
+          "MaxSpeed": 100,
+          "Radius": 27.200134,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "bc02e87c-b43d-47d0-a17e-98d74c544333",
+          "__enabled": false,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "eda2ddba-83ac-4a7c-9594-4393d17d95d3",
+          "Center": "0,0,81.00005",
+          "IsTrigger": true,
+          "Scale": "44.30003,74.99981,160.8997",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "2b7d1783-5a4b-4a66-afcf-788015d2535e",
+      "Flags": 0,
+      "Name": "Zombie (3)",
+      "Position": "-433.7025,-1138.425,5.731064",
+      "Tags": "enemy",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "986f9b9e-71d5-4e4b-8d3e-16a073e7ae14",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/error.vmat",
+          "Model": "models/zombie.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Enemy",
+          "__guid": "df0c07ef-1fe4-4f6b-87ab-57d6fcbd7f2a",
+          "agent": {
+            "_type": "component",
+            "component_id": "5d5f75b8-7800-4681-8f9a-ae187efad6cd",
+            "go": "2b7d1783-5a4b-4a66-afcf-788015d2535e",
+            "component_type": "NavMeshAgent"
+          },
+          "damage": 10,
+          "Health": 100,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "5d5f75b8-7800-4681-8f9a-ae187efad6cd",
+          "Acceleration": 60,
+          "Height": 160.30016,
+          "MaxSpeed": 100,
+          "Radius": 27.200134,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "1bf833a3-4bcb-4e2f-aa38-b27f6549fca5",
+          "__enabled": false,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "c4f01d31-d44d-4b48-b8c4-569ab191a467",
+          "Center": "0,0,81.00005",
+          "IsTrigger": true,
+          "Scale": "44.30003,74.99981,160.8997",
+          "Static": false
+        }
+      ]
+    },
+    {
       "__guid": "469e0f14-f710-48e4-85f9-426469c177b5",
       "Flags": 0,
       "Name": "Screen",
@@ -673,6 +868,76 @@
           "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
         }
       ]
+    },
+    {
+      "__guid": "c4daec36-c63b-42f7-996a-793835f6f3b1",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-830.6072,-471.2994,661.4434",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "-587.1813,-2.36997,89.82195",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0,1,0,1",
+          "Radius": 400,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-620.6368,20.16254,63.01562",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c346b54f-d8d0-47bb-b7ae-a3ab5af199ba",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "7d32ab3c-223b-4279-b56f-7edcab35bf87",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "cc5d4e62-0548-4f87-8747-0a02a6bf5a14",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -698,7 +963,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-22T00:48:27.035829\u002B01:00",
+  "LastSaved": "2024-06-23T13:25:36.8984869\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
