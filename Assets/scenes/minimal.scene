@@ -1,5 +1,5 @@
 {
-  "__guid": "7f4c5617-e7c7-4f77-aa89-bc9671d2c9d5",
+  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
   "GameObjects": [
     {
       "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
@@ -168,8 +168,10 @@
           },
           "CrouchSpeed": 120,
           "Currency": 0,
+          "CurrencyPickupValue": 1,
           "EyePosition": "0,0,0",
           "Health": 100,
+          "HealthPickupValue": 10,
           "Inventory": [
             "weapon_pistol"
           ],
@@ -467,13 +469,36 @@
         },
         {
           "__type": "PlayerHUD",
-          "__guid": "97c42fdc-3516-43b9-b6f8-10824fb19cbc",
-          "Player": {
-            "_type": "component",
-            "component_id": "0b6d73f8-a579-48cf-9c44-5ee7c0d395d7",
-            "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-            "component_type": "TopDownGPC"
-          }
+          "__guid": "97c42fdc-3516-43b9-b6f8-10824fb19cbc"
+        }
+      ]
+    },
+    {
+      "__guid": "e5d8b390-edf8-4d57-a404-a36f200ba79c",
+      "Flags": 0,
+      "Name": "Health",
+      "Position": "-157.0639,-38.45652,30.30743",
+      "Scale": "0.4892433,0.4892433,0.4892433",
+      "Tags": "health_pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "4f4d0373-61e4-4dc8-abf9-1d2107ff25eb",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.03333,1,0,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "aedbb8a6-63d5-46fd-b6d2-fdf10c6e95b8",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     },
@@ -483,7 +508,7 @@
       "Name": "Currency",
       "Position": "-40.8187,-95.42053,30.30743",
       "Scale": "0.4892433,0.4892433,0.4892433",
-      "Tags": "gold",
+      "Tags": "gold_pickup",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -523,10 +548,6 @@
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SpawnManager",
-          "__guid": "aeb9d192-1fac-49db-ad87-0aae6b7958ff"
         }
       ]
     },
@@ -548,6 +569,14 @@
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "0.17454,0.59535,0.05815,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "f4c98ab2-597a-4c82-9934-5bc8e3d503b5",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     },
@@ -673,76 +702,6 @@
           "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
         }
       ]
-    },
-    {
-      "__guid": "c4daec36-c63b-42f7-996a-793835f6f3b1",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "-830.6072,-471.2994,661.4434",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true
-    },
-    {
-      "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
-      "Flags": 0,
-      "Name": "Point Light",
-      "Position": "-587.1813,-2.36997,89.82195",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0,1,0,1",
-          "Radius": 400,
-          "Shadows": true
-        }
-      ]
-    },
-    {
-      "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
-      "Flags": 0,
-      "Name": "Cube",
-      "Position": "-620.6368,20.16254,63.01562",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "c346b54f-d8d0-47bb-b7ae-a3ab5af199ba",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "7d32ab3c-223b-4279-b56f-7edcab35bf87",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "cc5d4e62-0548-4f87-8747-0a02a6bf5a14",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
     }
   ],
   "SceneProperties": {
@@ -768,7 +727,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-23T13:26:40.4076341\u002B01:00",
+  "LastSaved": "2024-06-23T14:50:27.9886952\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
