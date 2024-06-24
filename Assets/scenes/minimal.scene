@@ -402,8 +402,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/error.vmat",
-          "Model": "models/zombie.vmdl",
+          "Model": "models/zombie_textured.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
@@ -451,6 +450,28 @@
           "IsTrigger": true,
           "Scale": "44.30003,74.99981,160.8997",
           "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "53a4d386-8179-4b0c-ab84-32569f58bc70",
+          "Flags": 0,
+          "Name": "DamageBox",
+          "Position": "10.09875,0,60.73859",
+          "Scale": "0.6999999,1,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "aecfd9a1-8076-4b5a-81a6-d2c2d1058dd3",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,62.59985,120",
+              "Static": false
+            }
+          ]
         }
       ]
     },
@@ -807,7 +828,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T19:39:43.828043\u002B01:00",
+  "LastSaved": "2024-06-24T20:42:38.3743974\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
