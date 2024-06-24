@@ -6,8 +6,13 @@
 
 <root>
 	<div class="vitals">
-	<p>Currency: @LocalPlayer.Currency</p>
-	<p>@GetTimeString()</p>
+		<p>Currency: @LocalPlayer.Currency</p>
+		<p>@GetTimeString()</p>
+	</div>
+	<div class="wave_information">
+		<p>Wave: @EnemyManager.Wave</p>
+		<p>Enemies Remaining: @EnemyManager.TotalEnemies</p>
+		<p>Total Amount Of Enemies: @EnemyManager.AmountOfEnemiesToSpawn</p>
 	</div>
 
 	<div class="healthbars">
@@ -24,12 +29,19 @@
 
 
 	TopDownGPC LocalPlayer { get; set; }
+
+	EnemyManager EnemyManager { get; set; }
 	
 	protected override void OnFixedUpdate()
 	{
 		if ( !LocalPlayer.IsValid() )
 		{
 			LocalPlayer = Scene.GetAllComponents<TopDownGPC>().FirstOrDefault( p => p.Network.OwnerConnection == Connection.Local );
+		}
+
+		if ( !EnemyManager.IsValid() )
+		{
+			EnemyManager = Scene.GetAllComponents<EnemyManager>().First();
 		}
 	}
 
