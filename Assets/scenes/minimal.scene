@@ -1,125 +1,477 @@
 {
-  "__guid": "7f4c5617-e7c7-4f77-aa89-bc9671d2c9d5",
+  "__guid": "f3a21d84-10a8-497b-84fb-f032e0107cb2",
   "GameObjects": [
     {
-      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
       "Flags": 0,
-      "Name": "2D Skybox",
-      "Position": "1044.427,-4086.598,0",
-      "Tags": "skybox",
+      "Name": "Currency",
+      "Position": "-40.8187,-95.42053,30.30743",
+      "Scale": "0.4892433,0.4892433,0.4892433",
+      "Tags": "gold",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
-          "__type": "Sandbox.SkyBox2D",
-          "__guid": "6112dcae-827b-4397-9814-c48d8acf76a0",
-          "SkyMaterial": "materials/skybox/skybox_dark_01.vmat",
-          "Tint": "1,1,1,1"
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "14663669-2674-4a2f-992e-479ee2f403db",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.70698,0.6605,0.00986,1"
         },
         {
-          "__type": "Sandbox.EnvmapProbe",
-          "__guid": "f73eda91-c308-404c-953c-f7bcdac3faf7",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "Bounds": {
-            "Mins": "-512,-512,-512",
-            "Maxs": "512,512,512"
-          },
-          "DelayBetweenUpdates": 0.1,
-          "Feathering": 0.02,
-          "FrameInterval": 5,
-          "MaxDistance": 512,
-          "Projection": "Sphere",
-          "RenderDynamically": false,
-          "TintColor": "0.72093,0.66057,0.66057,1",
-          "UpdateStrategy": "OnEnabled",
-          "ZFar": 4096,
-          "ZNear": 16
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "5bb19dd0-babe-4339-a86e-5d27cd7d7ab5",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     },
     {
-      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__guid": "82a75b56-d379-4e61-98ff-a57301ff728f",
       "Flags": 0,
-      "Name": "Camera",
-      "Position": "-267.452,-379.653,297.7903",
-      "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
+      "Name": "Cube",
+      "Position": "-589.2215,-95.23685,8.877748",
+      "Scale": "0.2772021,0.2772021,0.2772021",
+      "Tags": "spawn_point",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "069bd495-8021-4bc6-985f-c564c707c5e5",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 60,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "23315e97-a934-42f6-b469-cb431ee87405",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.17454,0.59535,0.05815,1"
+        }
+      ]
+    },
+    {
+      "__guid": "5c5f16cc-f83e-4e99-99d2-d1695d46a963",
+      "Flags": 0,
+      "Name": "Spawnpoint",
+      "Position": "-44.36435,-693.1443,23.12025",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "c4daec36-c63b-42f7-996a-793835f6f3b1",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-830.6072,-471.2994,661.4434",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-620.6368,20.16254,29.1096",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c346b54f-d8d0-47bb-b7ae-a3ab5af199ba",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.54304,0.48134,0.5814,1"
         },
         {
-          "__type": "Sandbox.Bloom",
-          "__guid": "ed9e7e59-11a1-4aa1-ae93-c00be99e1556",
-          "BloomColor": {
-            "color": [
-              {
-                "c": "1,1,1,1"
-              },
-              {
-                "t": 1,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "BloomCurve": [
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "7d32ab3c-223b-4279-b56f-7edcab35bf87",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "cc5d4e62-0548-4f87-8747-0a02a6bf5a14",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "b75e3122-4233-410d-8611-87fdb60a05bb",
+      "Flags": 0,
+      "Name": "EnemyObjects",
+      "Position": "490.1174,290.9662,305.7109",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "d3c460c3-9216-4436-ab40-265208dc0555",
+          "Flags": 0,
+          "Name": "EnemyManager",
+          "Position": "-1822.79,-2813.094,-255.0177",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
             {
-              "y": 0.5
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "7d2f0c79-4050-4d36-b8f7-2ac6cefd9300",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
             },
             {
-              "x": 1,
-              "y": 1
+              "__type": "EnemyManager",
+              "__guid": "19aa41c5-84da-48d0-93d2-a74ec8a5d669",
+              "EnemyType": {
+                "_type": "gameobject",
+                "go": "10629c75-2c00-4772-a832-188582542bf8"
+              }
             }
-          ],
-          "Mode": "Additive",
-          "Strength": 0.5,
-          "Threshold": 0.5,
-          "ThresholdWidth": 0.5
+          ]
         },
         {
-          "__type": "Sandbox.Tonemapping",
-          "__guid": "19a96d01-de14-46ae-b591-b189b1246ba5",
-          "__version": 1,
-          "ExposureBias": 2,
-          "ExposureCompensation": 0,
-          "ExposureMethod": "RGB",
-          "MaximumExposure": 2,
-          "MinimumExposure": 1,
-          "Mode": "Legacy",
-          "Rate": 1
+          "__guid": "17b1237e-b94a-489d-85ab-61120abd324e",
+          "Flags": 0,
+          "Name": "EnemySpawnpoints",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Children": [
+            {
+              "__guid": "2e1ebc85-e83c-4b24-816e-18a161f7b338",
+              "Flags": 0,
+              "Name": "EnemySpawn3",
+              "Position": "-2449.864,-218.9268,-281.1689",
+              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Tags": "enemy_spawn",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "58050814-3537-48e3-8eec-df458b076447",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "40ee8c04-5a1b-4958-9f08-fdf70c701cd8",
+              "Flags": 0,
+              "Name": "EnemySpawn1",
+              "Position": "-738.8058,205.2244,-281.1689",
+              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Tags": "enemy_spawn",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "bfeb95f8-961e-4df6-bebf-e311d3fda4f6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8139be4a-d54b-4926-bee7-5d715c90f3f5",
+              "Flags": 0,
+              "Name": "EnemySpawn4",
+              "Position": "513.4272,-552.9139,-281.1689",
+              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Tags": "enemy_spawn",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ff722a23-19bf-4350-bdaf-4c3670593188",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d343a103-6c15-4617-aacf-beb980c64b36",
+              "Flags": 0,
+              "Name": "EnemySpawn2",
+              "Position": "-28.98816,205.2244,-281.1689",
+              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Tags": "enemy_spawn",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a113fc21-2726-43d7-a594-7ded4f887a9f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
         },
         {
-          "__type": "Sandbox.Sharpen",
-          "__guid": "9d330f58-f795-47c9-baaf-cd5f2a54d641",
-          "Scale": 0.2
+          "__guid": "10629c75-2c00-4772-a832-188582542bf8",
+          "Flags": 0,
+          "Name": "Zombie",
+          "Position": "-111.8634,105.711,-299.9799",
+          "Tags": "enemy",
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/error.vmat",
+              "Model": "models/zombie.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "2bfb57a4-2530-4516-bfd9-e5a00b59364d",
+              "agent": {
+                "_type": "component",
+                "component_id": "117e8e45-7ea9-4dcc-8c1e-dc7bb8632b7f",
+                "go": "10629c75-2c00-4772-a832-188582542bf8",
+                "component_type": "NavMeshAgent"
+              },
+              "damage": 10,
+              "Health": 100,
+              "MaxHealth": 100
+            },
+            {
+              "__type": "Sandbox.NavMeshAgent",
+              "__guid": "117e8e45-7ea9-4dcc-8c1e-dc7bb8632b7f",
+              "Acceleration": 60,
+              "Height": 160.30016,
+              "MaxSpeed": 100,
+              "Radius": 27.200134,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "2a1b0745-a2d1-4d3d-819f-6eb60568a23b",
+              "__enabled": false,
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "ae33f2d1-2abf-493e-a827-fd0073992c27",
+              "Center": "0,0,81.00005",
+              "IsTrigger": true,
+              "Scale": "44.30003,74.99981,160.8997",
+              "Static": false
+            }
+          ]
         }
       ]
     },
     {
-      "__guid": "9ab3bb77-7c61-4494-9fa7-9b2c0b5f06b0",
+      "__guid": "3657935e-eec4-4d63-97f0-8df880833850",
       "Flags": 0,
-      "Name": "Map",
+      "Name": "WorldObjects",
+      "Position": "681.2952,475.182,822.7666",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
-      "Components": [
+      "Children": [
+        {
+          "__guid": "1f9b36b5-f4c8-4af1-a4ac-9eec3ffe86f8",
+          "Flags": 0,
+          "Name": "Gradient Fog",
+          "Position": "-2036.552,-2898.056,-865.6702",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "d8fb57a9-0884-408c-b9f7-0673ee8082f7",
+              "Color": "0.26667,0.28235,0.38824,1",
+              "EndDistance": 512,
+              "FalloffExponent": 1,
+              "Height": 200.99944,
+              "StartDistance": 64,
+              "VerticalFalloffExponent": 2
+            }
+          ]
+        },
+        {
+          "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "-1367.496,-477.5519,-660.3845",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
+              "Attenuation": 1.16,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0,1,0,1",
+              "Radius": 500,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "9ab3bb77-7c61-4494-9fa7-9b2c0b5f06b0",
+          "Flags": 0,
+          "Name": "Map",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.MapInstance",
+              "__guid": "c2964996-0cfc-4b7b-b6dd-a407cfad3d51",
+              "MapName": "maps/pztest.vmap",
+              "UseMapFromLaunch": false
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "363.1318,-4561.78,-822.7666",
+          "Tags": "skybox",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "6112dcae-827b-4397-9814-c48d8acf76a0",
+              "SkyMaterial": "materials/skybox/skybox_dark_01.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "f73eda91-c308-404c-953c-f7bcdac3faf7",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-512,-512,-512",
+                "Maxs": "512,512,512"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Sphere",
+              "RenderDynamically": false,
+              "TintColor": "0.72093,0.66057,0.66057,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "35c89fb2-5ae0-4062-a6e4-effe1f329610",
+      "Flags": 0,
+      "Name": "NetworkObjects",
+      "Position": "478.1472,552.7113,805.795",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "63fb7b56-40b7-4580-a490-c5c7d5a9419f",
+          "Flags": 0,
+          "Name": "Network Session",
+          "Position": "-553.3015,382.5854,-787.4974",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "NetworkSession",
+              "__guid": "f5064b87-1c54-414a-a320-9a3a8908d7a4"
+            }
+          ]
+        },
+        {
+          "__guid": "a842d317-1e3d-458b-a931-600c1c208cbd",
+          "Flags": 0,
+          "Name": "Network Manager",
+          "Position": "-531.9257,399.6201,-787.0616",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GameNetworkManager",
+              "__guid": "bf7eac53-4068-40e1-b92f-68341b092a17",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e"
+              },
+              "SpawnPoint": {
+                "_type": "gameobject",
+                "go": "5c5f16cc-f83e-4e99-99d2-d1695d46a963"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "4d272cc1-1bbc-447f-b329-3761d0ee4aba",
+      "Flags": 0,
+      "Name": "PlayerObjects",
+      "Position": "478.1472,552.7113,805.795",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
         {
           "__type": "Sandbox.MapInstance",
           "__guid": "c2964996-0cfc-4b7b-b6dd-a407cfad3d51",
@@ -402,7 +754,8 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
           "BodyGroups": 18446744073709551615,
-          "Model": "models/zombie_textured.vmdl",
+          "MaterialOverride": "materials/error.vmat",
+          "Model": "models/zombie.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
@@ -450,28 +803,6 @@
           "IsTrigger": true,
           "Scale": "44.30003,74.99981,160.8997",
           "Static": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "53a4d386-8179-4b0c-ab84-32569f58bc70",
-          "Flags": 0,
-          "Name": "DamageBox",
-          "Position": "10.09875,0,60.73859",
-          "Scale": "0.6999999,1,1",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "aecfd9a1-8076-4b5a-81a6-d2c2d1058dd3",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,62.59985,120",
-              "Static": false
-            }
-          ]
         }
       ]
     },
@@ -828,7 +1159,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T20:42:38.3743974\u002B01:00",
+  "LastSaved": "2024-06-24T19:39:43.828043\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

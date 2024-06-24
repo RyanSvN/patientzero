@@ -1,5 +1,4 @@
-@using Sandbox;
-@using Sandbox.UI;
+@using System
 @inherits PanelComponent
 
 @if ( !LocalPlayer.IsValid() ) return;
@@ -10,15 +9,24 @@
 		<p>@GetTimeString()</p>
 	</div>
 	<div class="wave_information">
-		<p>Wave: @EnemyManager.Wave</p>
-		<p>Enemies Remaining: @EnemyManager.TotalEnemies</p>
-		<p>Total Amount Of Enemies: @EnemyManager.AmountOfEnemiesToSpawn</p>
+		<div>
+			<p>@EnemyManager.Wave</p>
+			<p>Wave</p>
+		</div>
+		<div>
+			<p>@EnemyManager.AmountOfEnemiesToSpawn</p>
+			<p>Total Enemies</p>
+		</div>
+		<div>
+			<p>@EnemyManager.TotalEnemies</p>
+			<p>Enemies Remaining</p>
+		</div>
 	</div>
 
 	<div class="healthbars">
 		<div class="healthbar">
 			<div class="inner">
-				<div class="fill" style="width: @(LocalPlayer.Health / LocalPlayer.MaxHealth * 100f)%"></div>
+				<div class="fill" style="width: @( LocalPlayer.Health / LocalPlayer.MaxHealth * 100f )%"></div>
 			</div>
 		</div>
 	</div>
@@ -31,7 +39,7 @@
 	TopDownGPC LocalPlayer { get; set; }
 
 	EnemyManager EnemyManager { get; set; }
-	
+
 	protected override void OnFixedUpdate()
 	{
 		if ( !LocalPlayer.IsValid() )
@@ -46,7 +54,6 @@
 	}
 
 
-
 	string GetTimeString()
 	{
 		var time = LocalPlayer.TimeAlive;
@@ -57,7 +64,7 @@
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine(LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString());
+		return HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString(), EnemyManager.Wave, EnemyManager.TotalEnemies, EnemyManager.AmountOfEnemiesToSpawn );
 	}
 
 }

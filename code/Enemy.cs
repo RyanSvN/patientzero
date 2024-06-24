@@ -1,19 +1,16 @@
 using System;
-using System.Collections;
-using Sandbox;
 
 public sealed class Enemy : Component, Component.ITriggerListener
 {
 	public List<TopDownGPC> Players { get; set; }
-	//Zombie Damage
 	[Property]
-	public float damage { get; set; } = 10f;
+	public float Damage = 10f;
 
 	[Property] 
-	public float Health { get; set; } = 100f;
+	public float Health = 100f;
 
 	[Property] 
-	public float MaxHealth { get; set; } = 100f;
+	public float MaxHealth = 100f;
 
 	public TimeSince timeBeen { get; set; } = 0f;
 
@@ -27,7 +24,7 @@ public sealed class Enemy : Component, Component.ITriggerListener
 		var player = other.Components.Get<TopDownGPC>();
 		if ( player != null)
 		{
-			player.Health -= damage;
+			player.Health -= Damage;
 			player.Health = Math.Clamp ( player.Health, 0, player.MaxHealth);
 		}
 	}
