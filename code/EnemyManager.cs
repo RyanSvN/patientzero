@@ -51,7 +51,7 @@ public sealed class EnemyManager : Component
 		AmountOfEnemiesToSpawn = (int)Math.Round( AmountOfEnemiesToSpawn * SpawnMultiplier );
 		for ( int i = 0; i < AmountOfEnemiesToSpawn; i++ )
 		{
-			var nextSpawnPosition = SpawnPoints[RandomSpawnPosition()].Transform.LocalPosition;
+			var nextSpawnPosition = SpawnPoints[RandomSpawnPosition()].Transform.Position;
 			SpawnEnemy( nextSpawnPosition );
 		}
 	}
