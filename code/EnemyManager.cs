@@ -4,7 +4,7 @@ using Sandbox;
 public sealed class EnemyManager : Component
 {
 
-	public int Wave = 1;
+	public int Wave = 0;
 	public int TotalEnemies;
 	public int SpawnMultiplier = 2;
 	public int AmountOfEnemiesToSpawn = 2;
@@ -36,6 +36,10 @@ public sealed class EnemyManager : Component
 	
 	private void HasWaveEnded()
 	{
+		if ( Wave == 0 )
+		{
+			AmountOfEnemiesToSpawn = 1;
+		}
 		if ( TotalEnemies == 0 )
 		{
 			Wave += 1;
@@ -46,7 +50,7 @@ public sealed class EnemyManager : Component
 
 	private void SpawnNextWave()
 	{
-		AmountOfEnemiesToSpawn = AmountOfEnemiesToSpawn * SpawnMultiplier;
+		AmountOfEnemiesToSpawn *= SpawnMultiplier;
 		for ( int i = 0; i < AmountOfEnemiesToSpawn; i++ )
 		{
 			var nextSpawnPosition = SpawnPoints[RandomSpawnPosition()].Transform.LocalPosition;
@@ -76,7 +80,7 @@ public sealed class EnemyManager : Component
 
 	private void FetchAllEnemies()
 	{
-		var enemies = Scene.GetAllObjects(true).Where( x => x.Tags.Has( "enemy" ) ).ToList();
+		var enemies = Scene.GetAllObjects(true).Where( x => x.Tags.Has( "enemy" ) ).Where( x => x.Active ).ToList();
 		TotalEnemies = enemies.Count;
 	}
 
