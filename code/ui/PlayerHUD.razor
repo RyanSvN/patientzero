@@ -31,7 +31,7 @@
 	TopDownGPC LocalPlayer { get; set; }
 
 	EnemyManager EnemyManager { get; set; }
-	
+
 	protected override void OnFixedUpdate()
 	{
 		if ( !LocalPlayer.IsValid() )
@@ -46,7 +46,6 @@
 	}
 
 
-
 	string GetTimeString()
 	{
 		var time = LocalPlayer.TimeAlive;
@@ -57,7 +56,7 @@
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine(LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString());
+		return System.HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString() );
 	}
 
 }
