@@ -1,10 +1,11 @@
 {
-  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "__guid": "7f4c5617-e7c7-4f77-aa89-bc9671d2c9d5",
   "GameObjects": [
     {
       "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Flags": 0,
       "Name": "2D Skybox",
+      "Position": "1044.427,-4086.598,0",
       "Tags": "skybox",
       "Enabled": true,
       "NetworkMode": 2,
@@ -388,7 +389,7 @@
       "__guid": "10629c75-2c00-4772-a832-188582542bf8",
       "Flags": 0,
       "Name": "Zombie",
-      "Position": "-426.295,-783.9481,5.731064",
+      "Position": "378.254,396.6772,5.731064",
       "Tags": "enemy",
       "Enabled": true,
       "NetworkMode": 2,
@@ -454,7 +455,7 @@
       "__guid": "469e0f14-f710-48e4-85f9-426469c177b5",
       "Flags": 0,
       "Name": "Screen",
-      "Position": "309.1657,1149.848,217.6281",
+      "Position": "-1275.295,-2355.039,143.0777",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -474,41 +475,12 @@
       ]
     },
     {
-      "__guid": "e5d8b390-edf8-4d57-a404-a36f200ba79c",
-      "Flags": 0,
-      "Name": "Health",
-      "Position": "-157.0639,-38.45652,30.30743",
-      "Scale": "0.4892433,0.4892433,0.4892433",
-      "Tags": "health_pickup",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "4f4d0373-61e4-4dc8-abf9-1d2107ff25eb",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "0.03333,1,0,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "aedbb8a6-63d5-46fd-b6d2-fdf10c6e95b8",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
-    },
-    {
       "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
       "Flags": 0,
       "Name": "Currency",
       "Position": "-40.8187,-95.42053,30.30743",
       "Scale": "0.4892433,0.4892433,0.4892433",
-      "Tags": "gold_pickup",
+      "Tags": "gold",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -532,26 +504,6 @@
       ]
     },
     {
-      "__guid": "063f11fe-5849-4d6c-a116-fcba76c68906",
-      "Flags": 0,
-      "Name": "Cube",
-      "Position": "-151.2028,824.1442,31.97765",
-      "Scale": "0.4557585,0.4557585,0.4557585",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "b5221e2b-4430-4556-bfb2-2d23ebd74bff",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
       "__guid": "82a75b56-d379-4e61-98ff-a57301ff728f",
       "Flags": 0,
       "Name": "Cube",
@@ -569,14 +521,6 @@
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "0.17454,0.59535,0.05815,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "f4c98ab2-597a-4c82-9934-5bc8e3d503b5",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
         }
       ]
     },
@@ -584,7 +528,7 @@
       "__guid": "38c20855-2f1a-4b19-866b-055b9b110d7e",
       "Flags": 0,
       "Name": "Bullet",
-      "Position": "20.46471,974.4484,37.72488",
+      "Position": "-1329.702,-2469.804,37.72488",
       "Scale": "0.2100008,0.2100008,0.2100008",
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -684,7 +628,7 @@
       "__guid": "d3c460c3-9216-4436-ab40-265208dc0555",
       "Flags": 0,
       "Name": "EnemyManager",
-      "Position": "17.49392,922.1249,50.69315",
+      "Position": "-1332.673,-2522.128,50.69315",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -700,6 +644,76 @@
         {
           "__type": "EnemyManager",
           "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
+        }
+      ]
+    },
+    {
+      "__guid": "c4daec36-c63b-42f7-996a-793835f6f3b1",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-830.6072,-471.2994,661.4434",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "-587.1813,-2.36997,89.82195",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0,1,0,1",
+          "Radius": 400,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-620.6368,20.16254,63.01562",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c346b54f-d8d0-47bb-b7ae-a3ab5af199ba",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "7d32ab3c-223b-4279-b56f-7edcab35bf87",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "cc5d4e62-0548-4f87-8747-0a02a6bf5a14",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     }
@@ -727,7 +741,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-23T14:56:10.2374275\u002B01:00",
+  "LastSaved": "2024-06-24T16:51:54.8179493\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
