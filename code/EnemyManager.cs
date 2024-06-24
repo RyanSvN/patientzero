@@ -50,7 +50,7 @@ public sealed class EnemyManager : Component
 
 	private void SpawnNextWave()
 	{
-		AmountOfEnemiesToSpawn *= SpawnMultiplier;
+		AmountOfEnemiesToSpawn = 1; // FIX THIS
 		for ( int i = 0; i < AmountOfEnemiesToSpawn; i++ )
 		{
 			var nextSpawnPosition = SpawnPoints[RandomSpawnPosition()].Transform.LocalPosition;
