@@ -391,7 +391,6 @@
       "Name": "Zombie",
       "Position": "378.254,396.6772,5.731064",
       "Tags": "enemy",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -569,11 +568,7 @@
         {
           "__type": "Bullet",
           "__guid": "29918afb-0b7f-4b1b-8502-8f02f1a37ff7",
-          "damage": 25,
-          "zombie": {
-            "_type": "gameobject",
-            "go": "10629c75-2c00-4772-a832-188582542bf8"
-          }
+          "Damage": 25
         }
       ]
     },
