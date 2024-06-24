@@ -694,7 +694,11 @@
         },
         {
           "__type": "EnemyManager",
-          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4"
+          "__guid": "d53f261b-51f8-481f-8dd5-d5aa702c41d4",
+          "EnemyType": {
+            "_type": "gameobject",
+            "go": "10629c75-2c00-4772-a832-188582542bf8"
+          }
         }
       ]
     },
@@ -762,7 +766,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T16:35:26.5762971\u002B01:00",
+  "LastSaved": "2024-06-24T16:39:43.2093488\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
