@@ -245,6 +245,7 @@
           "Name": "Zombie",
           "Position": "-111.8634,105.711,-299.9799",
           "Tags": "enemy",
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -252,8 +253,8 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
               "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/error.vmat",
-              "Model": "models/zombie.vmdl",
+              "MaterialOverride": "materials/zombiemat.vmat",
+              "Model": "models/zombie/zombie.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -801,7 +802,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T20:48:01.7419015\u002B01:00",
+  "LastSaved": "2024-06-24T21:02:20.5010343\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "facepunch.9mm_bullet",
