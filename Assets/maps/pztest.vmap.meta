@@ -14,7 +14,14 @@
       "EditorReferences": [
         "fpopium.dev_grid_03#55241",
         "facepunch.w_usp#33631",
-        "tiowevolve.dev_purple_01#53003"
+        "tiowevolve.dev_purple_01#53003",
+        "facepunch.concrete_damaged#37801",
+        "facepunch.floor_grass_wetdirt_blend_a#18652",
+        "facepunch.concrete_cast_hs_02#37803",
+        "facepunch.wall_brick_old_bottom_dirt#18727",
+        "facepunch.floor_tile_marble#18685",
+        "tfassets.concretewall003b#20902",
+        "baik.woodtiles#28084"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/pztest.vmap"

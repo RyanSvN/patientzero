@@ -26,7 +26,7 @@ public sealed class Gun : Component
 			o.Enabled = true;
 
 			var p = o.Components.Get<Rigidbody>();
-			p.Velocity = lookDir.Forward * 500.0f + Vector3.Up * 540.0f;
+			p.Velocity = lookDir.Forward * 750.0f + Vector3.Up * 0.0f;
 
 			o.NetworkSpawn();
 		}

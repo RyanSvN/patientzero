@@ -14,7 +14,7 @@
         {
           "__type": "Sandbox.SkyBox2D",
           "__guid": "6112dcae-827b-4397-9814-c48d8acf76a0",
-          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "SkyMaterial": "materials/skybox/skybox_dark_01.vmat",
           "Tint": "1,1,1,1"
         },
         {
@@ -31,7 +31,7 @@
           "MaxDistance": 512,
           "Projection": "Sphere",
           "RenderDynamically": false,
-          "TintColor": "1,1,1,1",
+          "TintColor": "0.72093,0.66057,0.66057,1",
           "UpdateStrategy": "OnEnabled",
           "ZFar": 4096,
           "ZNear": 16
@@ -142,6 +142,7 @@
       "Flags": 0,
       "Name": "TopDownGPC",
       "Position": "-187.09,-4.688005,60.24152",
+      "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "player",
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -287,7 +288,8 @@
           "__guid": "e58cb900-50d5-4b03-b11a-a7f113631f6e",
           "Flags": 0,
           "Name": "RightHand",
-          "Position": "28.42065,-22.08631,55.09553",
+          "Position": "28.42061,-8.959467,47.608",
+          "Rotation": "0.8660254,-0.00000003893861,-0.0000000161289,0.5",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -296,7 +298,7 @@
               "__guid": "056b490b-de08-4f62-a7c6-f2321b338abe",
               "Flags": 0,
               "Name": "Gun",
-              "Position": "-3.807358,-0.4980621,-0.9960175",
+              "Position": "-15.18252,4.274201,-6.739692",
               "Rotation": "-0.1294095,0.8365164,-0.2241438,0.482963",
               "Enabled": true,
               "NetworkMode": 2,
@@ -313,19 +315,19 @@
               ],
               "Children": [
                 {
-                  "__guid": "d0f49668-68b0-4296-a012-a3ec09d9ce85",
+                  "__guid": "72b5c602-8a9c-4dab-9078-35b6762f5040",
                   "Flags": 0,
-                  "Name": "Cube (1)",
-                  "Position": "9.691513,-0.000005722046,-4.943619",
-                  "Rotation": "0,0.7071067,0,0.7071068",
-                  "Scale": "0.2396534,0.04035145,0.06908328",
+                  "Name": "Cube",
+                  "Position": "-9.586781,0.00003051757,16.60492",
+                  "Rotation": "0.00000001869813,-0.258819,0,0.9659256",
+                  "Scale": "0.1016655,0.1016655,0.3921036",
                   "Enabled": true,
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
-                      "__guid": "421e3fb5-9b4c-4f0b-9c1f-7d024b0742ce",
+                      "__guid": "6e76ae92-62dc-48ba-9f85-330343fa3b64",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/dev/box.vmdl",
                       "RenderType": "On",
@@ -334,18 +336,19 @@
                   ]
                 },
                 {
-                  "__guid": "f438b8dc-5d95-4e75-b6b6-563b39c333df",
+                  "__guid": "f2e09600-7096-4b23-b3ed-9af6580fa972",
                   "Flags": 0,
-                  "Name": "Cube",
-                  "Position": "5.756882,0,0",
-                  "Scale": "0.2396534,0.04035145,0.06908328",
+                  "Name": "Cube (2)",
+                  "Position": "-5.576674,-6.970603,9.659025",
+                  "Rotation": "0.00000001869813,-0.258819,0,0.9659255",
+                  "Scale": "0.1016655,0.1785886,0.07727714",
                   "Enabled": true,
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
-                      "__guid": "21a7b3e5-23d7-46e7-a8d8-faf3493bf7ea",
+                      "__guid": "d691912b-cbeb-4a07-8508-88518a305d45",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/dev/box.vmdl",
                       "RenderType": "On",
@@ -391,6 +394,7 @@
       "Name": "Zombie",
       "Position": "378.254,396.6772,5.731064",
       "Tags": "enemy",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -614,7 +618,7 @@
       "__guid": "5c5f16cc-f83e-4e99-99d2-d1695d46a963",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "-324.844,-87.33198,23.12025",
+      "Position": "-44.36435,-693.1443,23.12025",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true
@@ -659,7 +663,7 @@
       "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
       "Flags": 0,
       "Name": "Point Light",
-      "Position": "-587.1813,-2.36997,89.82195",
+      "Position": "-686.2005,-2.36997,162.3821",
       "Tags": "light_point,light",
       "Enabled": true,
       "NetworkMode": 2,
@@ -668,11 +672,11 @@
         {
           "__type": "Sandbox.PointLight",
           "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
-          "Attenuation": 1,
+          "Attenuation": 1.16,
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0,1,0,1",
-          "Radius": 400,
+          "Radius": 500,
           "Shadows": true
         }
       ]
@@ -681,7 +685,7 @@
       "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
       "Flags": 0,
       "Name": "Cube",
-      "Position": "-620.6368,20.16254,63.01562",
+      "Position": "-620.6368,20.16254,29.1096",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -692,7 +696,7 @@
           "BodyGroups": 18446744073709551615,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.54304,0.48134,0.5814,1"
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -757,6 +761,27 @@
           "Tint": "1,0,0,1"
         }
       ]
+    },
+    {
+      "__guid": "1f9b36b5-f4c8-4af1-a4ac-9eec3ffe86f8",
+      "Flags": 0,
+      "Name": "Gradient Fog",
+      "Position": "-1355.257,-2422.874,-42.90359",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.GradientFog",
+          "__guid": "d8fb57a9-0884-408c-b9f7-0673ee8082f7",
+          "Color": "0.26667,0.28235,0.38824,1",
+          "EndDistance": 512,
+          "FalloffExponent": 1,
+          "Height": 200.99944,
+          "StartDistance": 64,
+          "VerticalFalloffExponent": 2
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -782,7 +807,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T16:56:43.7128488\u002B01:00",
+  "LastSaved": "2024-06-24T19:39:43.828043\u002B01:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
