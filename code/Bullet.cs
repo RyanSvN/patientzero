@@ -1,19 +1,17 @@
 using System;
 
-
 public sealed class Bullet : Component, Component.ITriggerListener
 {
-	[Property]
-	public float Damage = 10f;
+	[Property] public float Damage = 10f;
 
 	public void OnTriggerEnter( Collider other )
 	{
 		var zombie = other.Components.Get<Enemy>();
-		if ( zombie != null)
+		if ( zombie != null )
 		{
-			Log.Info("Zombie Hit!");
+			Log.Info( "Zombie Hit!" );
 			zombie.Health -= Damage;
-			zombie.Health = Math.Clamp ( zombie.Health, 0, zombie.MaxHealth);
+			zombie.Health = Math.Clamp( zombie.Health, 0, zombie.MaxHealth );
 		}
 	}
 }

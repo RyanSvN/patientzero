@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using Sandbox;
-
-
 public sealed class Gun : Component
 {
 	[Property] public GameObject ObjectToSpawn { get; set; }

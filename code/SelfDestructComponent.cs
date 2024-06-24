@@ -1,5 +1,3 @@
-using Sandbox;
-
 public sealed class SelfDestructComponent : Component
 {
 	[Property] float Seconds { get; set; }
