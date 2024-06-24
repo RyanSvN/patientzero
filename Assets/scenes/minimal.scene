@@ -24,7 +24,7 @@
           "__type": "Sandbox.BoxCollider",
           "__guid": "5bb19dd0-babe-4339-a86e-5d27cd7d7ab5",
           "Center": "0,0,0",
-          "IsTrigger": true,
+          "IsTrigger": false,
           "Scale": "50,50,50",
           "Static": false
         }
@@ -266,7 +266,7 @@
                 "go": "10629c75-2c00-4772-a832-188582542bf8",
                 "component_type": "NavMeshAgent"
               },
-              "damage": 10,
+              "Damage": 10,
               "Health": 100,
               "MaxHealth": 100
             },
@@ -362,6 +362,7 @@
           "__guid": "9ab3bb77-7c61-4494-9fa7-9b2c0b5f06b0",
           "Flags": 0,
           "Name": "Map",
+          "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -673,42 +674,21 @@
                   ],
                   "Children": [
                     {
-                      "__guid": "72b5c602-8a9c-4dab-9078-35b6762f5040",
+                      "__guid": "3b6d1a7f-a2d6-40d8-8383-d5d3e28a1a15",
                       "Flags": 0,
-                      "Name": "Cube",
-                      "Position": "-9.586781,0.00003051757,16.60492",
-                      "Rotation": "0.00000001869813,-0.258819,0,0.9659256",
-                      "Scale": "0.1016655,0.1016655,0.3921036",
+                      "Name": "Cube (1)",
+                      "Position": "-5.157825,-5.25624,8.93377",
+                      "Rotation": "0.6123728,-0.3535529,-0.3535531,-0.6123725",
+                      "Scale": "1.318159,0.9718226,1.053198",
                       "Enabled": true,
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
-                          "__guid": "6e76ae92-62dc-48ba-9f85-330343fa3b64",
+                          "__guid": "9ef58836-5217-433d-887c-db6fe8977ecc",
                           "BodyGroups": 18446744073709551615,
-                          "Model": "models/dev/box.vmdl",
-                          "RenderType": "On",
-                          "Tint": "1,1,1,1"
-                        }
-                      ]
-                    },
-                    {
-                      "__guid": "f2e09600-7096-4b23-b3ed-9af6580fa972",
-                      "Flags": 0,
-                      "Name": "Cube (2)",
-                      "Position": "-5.576674,-6.970603,9.659025",
-                      "Rotation": "0.00000001869813,-0.258819,0,0.9659255",
-                      "Scale": "0.1016655,0.1785886,0.07727714",
-                      "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
-                      "Components": [
-                        {
-                          "__type": "Sandbox.ModelRenderer",
-                          "__guid": "d691912b-cbeb-4a07-8508-88518a305d45",
-                          "BodyGroups": 18446744073709551615,
-                          "Model": "models/dev/box.vmdl",
+                          "Model": "models/weapons/w_pistol.vmdl",
                           "RenderType": "On",
                           "Tint": "1,1,1,1"
                         }
@@ -751,16 +731,16 @@
           "Flags": 0,
           "Name": "Bullet",
           "Position": "-1807.849,-3022.515,-768.0701",
-          "Scale": "0.2100008,0.2100008,0.2100008",
+          "Scale": "3,3,3",
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "2c01d610-4d55-41f4-9aed-db51f8beb3d0",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/dev/sphere.vmdl",
-              "RenderType": "On",
+              "BodyGroups": 1,
+              "Model": "models/weapons/sbox_ammo/9mm_bullet/9mm_bullet.vmdl",
+              "RenderType": "Off",
               "Tint": "0,0.96667,1,1"
             },
             {
@@ -821,8 +801,11 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T20:09:26.5721307\u002B01:00",
+  "LastSaved": "2024-06-24T20:48:01.7419015\u002B01:00",
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "facepunch.9mm_bullet",
+    "gok.w_pistol"
+  ],
   "__version": 1
 }

@@ -108,8 +108,7 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 		Transform.Rotation = Rotation.FromYaw( EyeAngles.yaw ); // Set the rotation of the player to the eye angles yaw
 	}
 
-	protected override void
-		OnFixedUpdate() // Called on every tick, e.g 50 times a second depending on Fixed Update Frequency of the game
+	protected override void OnFixedUpdate() // Called on every tick, e.g 50 times a second depending on Fixed Update Frequency of the game
 	{
 		base.OnFixedUpdate();
 
@@ -197,14 +196,15 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 
 	public void OnTriggerEnter( Collider other )
 	{
+		Log.Info( "I AM HERE" );
 		var otherObject = other.GameObject;
 
-		if ( otherObject.Tags.Contains( "gold_pickup" ) )
+		if ( otherObject.Tags.Has( "gold_pickup" ) )
 		{
 			HandleCurrencyPickup( otherObject );
 		}
 
-		if ( otherObject.Tags.Contains( "health_pickup" ) )
+		if ( otherObject.Tags.Has( "health_pickup" ) )
 		{
 			HandleHealthPickup( otherObject );
 		}
