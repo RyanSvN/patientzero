@@ -10,9 +10,18 @@
 		<p>@GetTimeString()</p>
 	</div>
 	<div class="wave_information">
-		<p>Wave: @EnemyManager.Wave</p>
-		<p>Enemies Remaining: @EnemyManager.TotalEnemies</p>
-		<p>Total Amount Of Enemies: @EnemyManager.AmountOfEnemiesToSpawn</p>
+		<div>
+			<p>@EnemyManager.Wave</p>
+			<p>Wave</p>
+		</div>
+		<div>
+			<p>@EnemyManager.AmountOfEnemiesToSpawn</p>
+			<p>Total Enemies</p>
+		</div>
+		<div>
+			<p>@EnemyManager.TotalEnemies</p>
+			<p>Enemies Remaining</p>
+		</div>
 	</div>
 
 	<div class="healthbars">
@@ -56,7 +65,7 @@
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString() );
+		return System.HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString(), EnemyManager.Wave, EnemyManager.TotalEnemies, EnemyManager.AmountOfEnemiesToSpawn );
 	}
 
 }

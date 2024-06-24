@@ -4,9 +4,9 @@ using Sandbox;
 public sealed class EnemyManager : Component
 {
 
-	public int Wave = 0;
+	public int Wave;
 	public int TotalEnemies;
-	public int SpawnMultiplier = 2;
+	public float SpawnMultiplier = 1.5f;
 	public int AmountOfEnemiesToSpawn = 2;
 
 	public List<GameObject> SpawnPoints;
@@ -43,14 +43,13 @@ public sealed class EnemyManager : Component
 		if ( TotalEnemies == 0 )
 		{
 			Wave += 1;
-			SpawnMultiplier += 1;
 			SpawnNextWave();
 		}
 	}
 
 	private void SpawnNextWave()
 	{
-		AmountOfEnemiesToSpawn = 1; // FIX THIS
+		AmountOfEnemiesToSpawn = (int)Math.Round(AmountOfEnemiesToSpawn * SpawnMultiplier);
 		for ( int i = 0; i < AmountOfEnemiesToSpawn; i++ )
 		{
 			var nextSpawnPosition = SpawnPoints[RandomSpawnPosition()].Transform.LocalPosition;
