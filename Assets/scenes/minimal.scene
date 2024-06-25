@@ -1,5 +1,5 @@
 {
-  "__guid": "754ae584-cf22-4900-a58b-3cbc7a7974ba",
+  "__guid": "a9758129-c60b-4406-a4b1-df147aa42f2f",
   "GameObjects": [
     {
       "__guid": "16fc9b90-b3de-457c-99b8-a9c293a7ade3",
@@ -815,7 +815,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-25T15:26:50.2969957\u002B01:00",
+  "LastSaved": "2024-06-25T16:36:55.4069531\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "apetavern.ammobox_01",
