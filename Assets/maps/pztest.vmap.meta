@@ -21,7 +21,8 @@
         "facepunch.wall_brick_old_bottom_dirt#18727",
         "facepunch.floor_tile_marble#18685",
         "tfassets.concretewall003b#20902",
-        "baik.woodtiles#28084"
+        "baik.woodtiles#28084",
+        "fdd.torch_01#40905"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/pztest.vmap"
