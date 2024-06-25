@@ -22,7 +22,12 @@
         "facepunch.floor_tile_marble#18685",
         "tfassets.concretewall003b#20902",
         "baik.woodtiles#28084",
-        "fdd.torch_01#40905"
+        "fdd.torch_01#40905",
+        "facepunch.floor_tile_basalt#18682",
+        "rust.concrete_c_bld#22383",
+        "baik.woodcrate#58811",
+        "facepunch.plywood_hs#33583",
+        "facepunch.wood_trim_polished_blend_01#43518"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/pztest.vmap"

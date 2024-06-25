@@ -1,5 +1,5 @@
 {
-  "__guid": "f3a21d84-10a8-497b-84fb-f032e0107cb2",
+  "__guid": "a2b8a934-ca99-4a37-9123-6d3d20f82524",
   "GameObjects": [
     {
       "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
@@ -59,54 +59,6 @@
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true
-    },
-    {
-      "__guid": "c4daec36-c63b-42f7-996a-793835f6f3b1",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "-830.6072,-471.2994,661.4434",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true
-    },
-    {
-      "__guid": "560182df-8859-4241-ac99-b7222ff963ef",
-      "Flags": 0,
-      "Name": "Cube",
-      "Position": "-620.6368,20.16254,29.1096",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "c346b54f-d8d0-47bb-b7ae-a3ab5af199ba",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "0.54304,0.48134,0.5814,1"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "7d32ab3c-223b-4279-b56f-7edcab35bf87",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "cc5d4e62-0548-4f87-8747-0a02a6bf5a14",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
     },
     {
       "__guid": "b75e3122-4233-410d-8611-87fdb60a05bb",
@@ -328,8 +280,7 @@
             {
               "__type": "Sandbox.GradientFog",
               "__guid": "d8fb57a9-0884-408c-b9f7-0673ee8082f7",
-              "__enabled": false,
-              "Color": "0.26667,0.28235,0.38824,1",
+              "Color": "0.12655,0.13387,0.1814,0.51",
               "EndDistance": 800,
               "FalloffExponent": 1,
               "Height": 134.49936,
@@ -337,46 +288,6 @@
               "VerticalFalloffExponent": 2
             }
           ]
-        },
-        {
-          "__guid": "2b33ad19-901a-4c1d-92ff-48276a3e236e",
-          "Flags": 0,
-          "Name": "Point Light",
-          "Position": "-1367.496,-477.5519,-660.3845",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "18482e02-6849-4910-997e-29019aea1eb5",
-              "Attenuation": 1.16,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0,1,0,1",
-              "Radius": 500,
-              "Shadows": true
-            }
-          ]
-        },
-        {
-          "__guid": "9ab3bb77-7c61-4494-9fa7-9b2c0b5f06b0",
-          "Flags": 0,
-          "Name": "Map",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.MapInstance",
-              "__guid": "c2964996-0cfc-4b7b-b6dd-a407cfad3d51",
-              "MapName": "maps/pztest.vmap",
-              "UseMapFromLaunch": false
-            }
-          ],
-          "Children": []
         },
         {
           "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
@@ -778,6 +689,32 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "cc8d06e2-0e50-4f85-80df-0289f1bc4aae",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-134.099,78.08206,-111.2675",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "22448d21-526f-4e1c-a636-9fa8e8d9ae4c",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "2533c706-6007-4c34-b4ba-3eb924625247",
+          "MapName": "maps/pztest.vmap",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -803,7 +740,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T21:02:20.5010343\u002B01:00",
+  "LastSaved": "2024-06-25T15:04:31.9808683\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "facepunch.9mm_bullet",
