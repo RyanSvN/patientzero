@@ -516,6 +516,16 @@
               "WalkSpeed": 200
             },
             {
+              "__type": "PlayerFootsteps",
+              "__guid": "4472898d-c073-43fe-81da-73f9efcef4c8",
+              "Source": {
+                "_type": "component",
+                "component_id": "df6ed015-7c07-4189-a9a2-a14f1a198d04",
+                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
+                "component_type": "SkinnedModelRenderer"
+              }
+            },
+            {
               "__type": "Sandbox.CharacterController",
               "__guid": "57e0d7c6-13c8-48d6-95ca-9c573c9b455b",
               "Acceleration": 10,
@@ -805,7 +815,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-25T16:21:17.9289144\u002B01:00",
+  "LastSaved": "2024-06-25T15:26:50.2969957\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "apetavern.ammobox_01",
