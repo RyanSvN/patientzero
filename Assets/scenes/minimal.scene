@@ -778,27 +778,6 @@
           ]
         }
       ]
-    },
-    {
-      "__guid": "0f8b9c03-4e1d-47ce-a31f-1d093c80d1ef",
-      "Flags": 0,
-      "Name": "Sun",
-      "Position": "776.3955,-3205.522,1208.611",
-      "Rotation": "-0.2329629,0.3036032,0.5624222,0.7329629",
-      "Tags": "light_directional,light",
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "435c09fd-ccdc-4f5e-9a0f-4d6b6ed90930",
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "Shadows": true,
-          "SkyColor": "0.05882,0.07451,0.08235,1"
-        }
-      ]
     }
   ],
   "SceneProperties": {
@@ -824,7 +803,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-25T13:40:52.19116\u002B01:00",
+  "LastSaved": "2024-06-24T21:02:20.5010343\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "facepunch.9mm_bullet",
