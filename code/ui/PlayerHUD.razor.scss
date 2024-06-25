@@ -23,7 +23,7 @@ PlayerHUD
 		position: absolute;
 		flex-direction: column;
 		right: 5px;
-		bottom: 5px;
+		top: 5px;
 
 		
 		div {
@@ -42,8 +42,6 @@ PlayerHUD
 	.healthbars
 	{
 		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
 
 		.healthbar
 		{

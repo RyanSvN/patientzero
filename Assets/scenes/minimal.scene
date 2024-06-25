@@ -1,13 +1,71 @@
 {
-  "__guid": "a2b8a934-ca99-4a37-9123-6d3d20f82524",
+  "__guid": "754ae584-cf22-4900-a58b-3cbc7a7974ba",
   "GameObjects": [
+    {
+      "__guid": "16fc9b90-b3de-457c-99b8-a9c293a7ade3",
+      "Flags": 0,
+      "Name": "Ammo",
+      "Position": "-156.618,-240.2165,2.004935",
+      "Scale": "3,3,3",
+      "Tags": "ammo_pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "528566fe-09a9-4c9b-a8f2-f40ba3f69a67",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/items/ammo/ammobox_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "32c0c4e9-644e-4740-af5a-c62d05864b33",
+          "Center": "0,0.7,3.399997",
+          "IsTrigger": true,
+          "Scale": "8.800028,14.6,6.100037",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "3d9c9dce-0962-4972-a48d-114e2933b907",
+      "Flags": 0,
+      "Name": "Health",
+      "Position": "97.35835,-95.42053,0.637373",
+      "Scale": "3,3,3",
+      "Tags": "health_pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c57d89cd-40c8-4cb0-a2d4-f582bc0a8e64",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/items/healthkit/healthkit_s.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "eb7e6b44-a610-4bca-b64f-7aa93aa10b27",
+          "Center": "0,0,8.299955",
+          "IsTrigger": true,
+          "Scale": "14.89998,17.6,19.30001",
+          "Static": false
+        }
+      ]
+    },
     {
       "__guid": "d99002c7-46fb-4183-b702-e61f6b3f2be4",
       "Flags": 0,
       "Name": "Currency",
-      "Position": "-40.8187,-95.42053,30.30743",
-      "Scale": "0.4892433,0.4892433,0.4892433",
-      "Tags": "gold",
+      "Position": "-40.8187,-288.5578,-0.1695213",
+      "Scale": "3,3,3",
+      "Tags": "gold_pickup",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -16,16 +74,16 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "14663669-2674-4a2f-992e-479ee2f403db",
           "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "0.70698,0.6605,0.00986,1"
+          "Model": "models/mymodels/gold_bar/gold_bar.vmdl",
+          "RenderType": "Off",
+          "Tint": "0.92093,0.78029,0.0771,1"
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "5bb19dd0-babe-4339-a86e-5d27cd7d7ab5",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
+          "__guid": "6adfbc05-2223-4677-9747-84727e005207",
+          "Center": "0,0,1.800001",
+          "IsTrigger": true,
+          "Scale": "6.500046,15.59998,4.599993",
           "Static": false
         }
       ]
@@ -109,8 +167,8 @@
               "__guid": "2e1ebc85-e83c-4b24-816e-18a161f7b338",
               "Flags": 0,
               "Name": "EnemySpawn3",
-              "Position": "-2449.864,-218.9268,-281.1689",
-              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Position": "-2555.834,-218.9268,-307.7276",
+              "Scale": "3,3,3",
               "Tags": "enemy_spawn",
               "Enabled": true,
               "NetworkMode": 2,
@@ -120,9 +178,9 @@
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "58050814-3537-48e3-8eec-df458b076447",
                   "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
+                  "Model": "models/cactus/tombstone.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "1,1,1,1"
                 }
               ]
             },
@@ -130,8 +188,9 @@
               "__guid": "40ee8c04-5a1b-4958-9f08-fdf70c701cd8",
               "Flags": 0,
               "Name": "EnemySpawn1",
-              "Position": "-738.8058,205.2244,-281.1689",
-              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Position": "-738.8057,205.2245,-308.9326",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Scale": "3,3,3",
               "Tags": "enemy_spawn",
               "Enabled": true,
               "NetworkMode": 2,
@@ -141,9 +200,9 @@
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "bfeb95f8-961e-4df6-bebf-e311d3fda4f6",
                   "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
+                  "Model": "models/cactus/tombstone.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "1,1,1,1"
                 }
               ]
             },
@@ -151,8 +210,9 @@
               "__guid": "8139be4a-d54b-4926-bee7-5d715c90f3f5",
               "Flags": 0,
               "Name": "EnemySpawn4",
-              "Position": "513.4272,-552.9139,-281.1689",
-              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Position": "513.4271,-552.9139,-307.9825",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Scale": "3,3,3",
               "Tags": "enemy_spawn",
               "Enabled": true,
               "NetworkMode": 2,
@@ -162,9 +222,9 @@
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "ff722a23-19bf-4350-bdaf-4c3670593188",
                   "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
+                  "Model": "models/cactus/tombstone.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "1,1,1,1"
                 }
               ]
             },
@@ -172,8 +232,9 @@
               "__guid": "d343a103-6c15-4617-aacf-beb980c64b36",
               "Flags": 0,
               "Name": "EnemySpawn2",
-              "Position": "-28.98816,205.2244,-281.1689",
-              "Scale": "0.5446204,0.5446204,0.5446204",
+              "Position": "-28.98816,205.2244,-307.591",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Scale": "3,3,3",
               "Tags": "enemy_spawn",
               "Enabled": true,
               "NetworkMode": 2,
@@ -183,9 +244,9 @@
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "a113fc21-2726-43d7-a594-7ded4f887a9f",
                   "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
+                  "Model": "models/cactus/tombstone.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "1,1,1,1"
                 }
               ]
             }
@@ -197,7 +258,6 @@
           "Name": "Zombie",
           "Position": "-111.8634,105.711,-299.9799",
           "Tags": "enemy",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -582,6 +642,7 @@
                   "Name": "Gun",
                   "Position": "-15.18252,4.274201,-6.739692",
                   "Rotation": "-0.1294095,0.8365164,-0.2241438,0.482963",
+                  "Tags": "gun",
                   "Enabled": true,
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
@@ -589,6 +650,10 @@
                     {
                       "__type": "Gun",
                       "__guid": "6855866a-dba1-4ca4-b4d8-a3b5b1d2b5ef",
+                      "AmmoPerMag": 8,
+                      "CurrentAmmoInMag": 0,
+                      "CurrentMags": 0,
+                      "NumberOfMags": 3,
                       "ObjectToSpawn": {
                         "_type": "gameobject",
                         "go": "38c20855-2f1a-4b19-866b-055b9b110d7e"
@@ -753,8 +818,12 @@
   "LastSaved": "2024-06-25T15:26:50.2969957\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
+    "apetavern.ammobox_01",
+    "baik.healthkit_s",
     "facepunch.9mm_bullet",
-    "gok.w_pistol"
+    "gok.w_pistol",
+    "hillrop.tombstone",
+    "snakecoil.gold_bar"
   ],
   "__version": 1
 }

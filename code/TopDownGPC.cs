@@ -196,7 +196,6 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 
 	public void OnTriggerEnter( Collider other )
 	{
-		Log.Info( "I AM HERE" );
 		var otherObject = other.GameObject;
 
 		if ( otherObject.Tags.Has( "gold_pickup" ) )
@@ -208,11 +207,26 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 		{
 			HandleHealthPickup( otherObject );
 		}
+		
+		if ( otherObject.Tags.Has( "ammo_pickup" ) )
+		{
+			HandleAmmoPickup( otherObject );
+		}
 	}
 
 	private void HandleCurrencyPickup( GameObject otherObject )
 	{
 		Currency += CurrencyPickupValue;
+		otherObject.Destroy();
+	}
+	
+	private void HandleAmmoPickup( GameObject otherObject )
+	{
+		var gun = Scene.GetAllComponents<Gun>().FirstOrDefault( p => p.Network.OwnerConnection == Connection.Local );
+		if ( gun == null )
+			return;
+
+		gun.CurrentMags += 1;
 		otherObject.Destroy();
 	}
 
