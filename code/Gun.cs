@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices.JavaScript;
 
 public sealed class Gun : Component
 {
@@ -8,26 +7,37 @@ public sealed class Gun : Component
 	[Property] public int AmmoPerMag = 8;
 	[Property] public int CurrentAmmoInMag;
 	[Property] public int CurrentMags;
+	private Vector3 SoundLocation;
+	private bool IsReloading = false;
 
 	protected override void OnUpdate()
 	{
 		if ( IsProxy )
 			return;
+		
+		var pc = Components.GetInAncestors<TopDownGPC>();
+		if ( pc is null )
+			return;
+
+		SoundLocation = pc.Camera.Transform.Position;
 
 		if ( Input.Pressed( "Attack1" ) )
 		{
 			if ( CurrentAmmoInMag != 0 )
 			{
-				var pc = Components.GetInAncestors<TopDownGPC>();
-				if ( pc is null )
-					return;
-
 				var lookDirection = pc.EyeAngles.ToRotation();
-				OnShoot( lookDirection );
+				if ( !IsReloading )
+				{
+					OnShoot( lookDirection );
+				}
+			}
+			else
+			{
+				Sound.Play( "gun_empty", SoundLocation );
 			}
 		}
 
-		if ( Input.Pressed( "Reload" ) )
+		if ( Input.Pressed( "reload" ) )
 		{
 			OnReload();
 		}
@@ -44,6 +54,8 @@ public sealed class Gun : Component
 		p.Velocity = lookDirection.Forward * 750.0f + Vector3.Up * 0.0f;
 
 		o.NetworkSpawn();
+		Sound.Play("gun_shoot", SoundLocation);
+		CurrentAmmoInMag -= 1;
 	}
 
 	private void OnReload()
@@ -53,8 +65,13 @@ public sealed class Gun : Component
 			return;
 		}
 
+		IsReloading = true;
+
 		CurrentAmmoInMag = AmmoPerMag;
 		CurrentMags -= 1;
+		Sound.Play("gun_reload", SoundLocation);
+		
+		IsReloading = false; // TODO: Don't allow shooting while reloading?
 	}
 
 

@@ -5,6 +5,8 @@
 
 <root>
 	<div class="vitals">
+		<p>Ammo In Clip: @Gun.CurrentAmmoInMag</p>
+		<p>Remaining Mags: @Gun.CurrentMags</p>
 		<p>Currency: @LocalPlayer.Currency</p>
 		<p>@GetTimeString()</p>
 	</div>
@@ -37,6 +39,7 @@
 
 
 	TopDownGPC LocalPlayer { get; set; }
+	Gun Gun { get; set; }
 
 	EnemyManager EnemyManager { get; set; }
 
@@ -45,6 +48,7 @@
 		if ( !LocalPlayer.IsValid() )
 		{
 			LocalPlayer = Scene.GetAllComponents<TopDownGPC>().FirstOrDefault( p => p.Network.OwnerConnection == Connection.Local );
+			Gun = Scene.GetAllComponents<Gun>().FirstOrDefault( p => p.Network.OwnerConnection == Connection.Local );
 		}
 
 		if ( !EnemyManager.IsValid() )
@@ -64,7 +68,7 @@
 
 	protected override int BuildHash()
 	{
-		return HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString(), EnemyManager.Wave, EnemyManager.TotalEnemies, EnemyManager.AmountOfEnemiesToSpawn );
+		return HashCode.Combine( LocalPlayer.Currency, LocalPlayer.Health, @GetTimeString(), EnemyManager.Wave, EnemyManager.TotalEnemies, EnemyManager.AmountOfEnemiesToSpawn, Gun.CurrentMags, Gun.CurrentAmmoInMag );
 	}
 
 }
