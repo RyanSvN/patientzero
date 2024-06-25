@@ -256,9 +256,8 @@
           "__guid": "10629c75-2c00-4772-a832-188582542bf8",
           "Flags": 0,
           "Name": "Zombie",
-          "Position": "-111.8634,105.711,-299.9799",
+          "Position": "-111.8634,109.511,-299.9799",
           "Tags": "enemy",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -293,10 +292,10 @@
             {
               "__type": "Sandbox.NavMeshAgent",
               "__guid": "117e8e45-7ea9-4dcc-8c1e-dc7bb8632b7f",
-              "Acceleration": 60,
-              "Height": 160.30016,
+              "Acceleration": 100,
+              "Height": 119.70012,
               "MaxSpeed": 100,
-              "Radius": 27.200134,
+              "Radius": 17.700102,
               "Separation": 0.25,
               "UpdatePosition": true,
               "UpdateRotation": true
@@ -317,9 +316,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "ae33f2d1-2abf-493e-a827-fd0073992c27",
-              "Center": "0,0,81.00005",
+              "Center": "0,0,61.00006",
               "IsTrigger": true,
-              "Scale": "44.30003,74.99981,160.8997",
+              "Scale": "44.30003,74.99981,121.7997",
               "Static": false
             }
           ]
@@ -822,7 +821,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-25T16:36:55.4069531\u002B01:00",
+  "LastSaved": "2024-06-25T21:10:28.3449268\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "apetavern.ammobox_01",
