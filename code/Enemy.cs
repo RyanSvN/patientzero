@@ -14,6 +14,8 @@ public sealed class Enemy : Component, Component.ITriggerListener
 
 	public TimeSince timeBeen { get; set; } = 0f;
 
+	[Property] 
+	public ModelRenderer ZombieModel { get; set; }
 
 
 	[Property]
@@ -43,7 +45,7 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	{
 		
 		FetchAndOrderPlayersByDistanceToZombie();
-		 
+
 		if (Health <= 0)
 		{
 			GameObject.Destroy();

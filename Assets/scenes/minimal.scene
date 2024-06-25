@@ -1,5 +1,5 @@
 {
-  "__guid": "754ae584-cf22-4900-a58b-3cbc7a7974ba",
+  "__guid": "7209e442-b2b8-470a-bf9f-101db0508398",
   "GameObjects": [
     {
       "__guid": "16fc9b90-b3de-457c-99b8-a9c293a7ade3",
@@ -258,6 +258,7 @@
           "Name": "Zombie",
           "Position": "-111.8634,105.711,-299.9799",
           "Tags": "enemy",
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -281,7 +282,13 @@
               },
               "Damage": 10,
               "Health": 100,
-              "MaxHealth": 100
+              "MaxHealth": 100,
+              "ZombieModel": {
+                "_type": "component",
+                "component_id": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
+                "go": "10629c75-2c00-4772-a832-188582542bf8",
+                "component_type": "ModelRenderer"
+              }
             },
             {
               "__type": "Sandbox.NavMeshAgent",
@@ -517,7 +524,7 @@
             },
             {
               "__type": "PlayerFootsteps",
-              "__guid": "4472898d-c073-43fe-81da-73f9efcef4c8",
+              "__guid": "42d5af1f-31d6-4427-8f4f-900cc7f5d120",
               "Source": {
                 "_type": "component",
                 "component_id": "df6ed015-7c07-4189-a9a2-a14f1a198d04",
@@ -815,7 +822,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-25T15:26:50.2969957\u002B01:00",
+  "LastSaved": "2024-06-25T17:19:43.4310939\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "apetavern.ammobox_01",

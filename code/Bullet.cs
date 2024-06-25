@@ -1,4 +1,5 @@
 using System;
+using System.Collections.ObjectModel;
 
 public sealed class Bullet : Component, Component.ITriggerListener
 {
@@ -12,6 +13,7 @@ public sealed class Bullet : Component, Component.ITriggerListener
 			Log.Info( "Zombie Hit!" );
 			zombie.Health -= Damage;
 			zombie.Health = Math.Clamp( zombie.Health, 0, zombie.MaxHealth );
+			zombie.ZombieModel.Tint = "#5E0000";
 		}
 	}
 }
