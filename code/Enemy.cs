@@ -51,8 +51,6 @@ public sealed class Enemy : Component, Component.ITriggerListener
 			GameObject.Destroy();
 			Log.Info("ZOMBIE DESTROYED!");
 			Sound.Play("zombie_die", Transform.Position);
-			return;
-			
 		}
 
 		if (Players.Count == 0)

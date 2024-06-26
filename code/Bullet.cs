@@ -14,7 +14,7 @@ public sealed class Bullet : Component, Component.ITriggerListener
 			zombie.Health -= Damage;
 			zombie.Health = Math.Clamp( zombie.Health, 0, zombie.MaxHealth );
 			Sound.Play("zombie_die", zombie.Transform.Position);
-			zombie.ZombieModel.Tint = "#5E0000";
+			// zombie.ZombieModel.Tint = "#5E0000";
 		}
 	}
 }
