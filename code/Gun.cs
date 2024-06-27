@@ -19,7 +19,9 @@ public sealed class Gun : Component
 		if ( pc is null )
 			return;
 
-		SoundLocation = pc.Camera.Transform.Position;
+		//SoundLocation = pc.Camera.Transform.Position;
+		SoundLocation = Transform.Position;
+
 
 		if ( Input.Pressed( "Attack1" ) )
 		{
