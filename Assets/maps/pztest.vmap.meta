@@ -48,7 +48,20 @@
         "frogpond.officedesk#12969",
         "facepunch.concrete_cast_hs_01#28794",
         "rustextended.tiles_a_blend#43326",
-        "rustextended.plaster_d_painted_blue#43351"
+        "rustextended.plaster_d_painted_blue#43351",
+        "ambientcg.tiles_036#37167",
+        "fkeep.ceramic_tile_floor_tint#53310",
+        "facepunch.metal_trim_01#43480",
+        "gbonn.concretetiledfloor#49286",
+        "fpopium.carpet_a1#55271",
+        "tfassets.wood_wall002b#20923",
+        "rust.rock_med_a#25127",
+        "fish.rock_d#57874",
+        "fish.rock_a#57877",
+        "paths.rubble#59188",
+        "luke.office_pc#22880",
+        "facepunch.office_screen_01#43555",
+        "polyrats.untitled_3#13911"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/pztest.vmap"

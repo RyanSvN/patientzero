@@ -28,13 +28,14 @@ PlayerHUD
 		
 		div {
 			padding: 10px;
+			margin-top: 10px;
 			flex: 1;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-evenly;
 			border: #3472e6;
 			border-radius: 10px;
-			background: #5A738B;
+			background: #55555574;
 			color: whitesmoke;
 		}
 	}

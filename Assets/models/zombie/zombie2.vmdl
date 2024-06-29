@@ -13,7 +13,7 @@
 						_class = "DefaultMaterialGroup"
 						remaps = [  ]
 						use_global_default = true
-						global_default_material = "models/zombie/zombie_text.vmat"
+						global_default_material = "materials/zombie2.vmat"
 					},
 				]
 			},
@@ -23,10 +23,10 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/zombie.fbx"
+						filename = "models/zombie/zombiefin3.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, -90.0, 0.0 ]
-						import_scale = 0.15
+						import_scale = 0.1
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -36,8 +36,7 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"Cube_002",
-								"Cube_003",
+								"Cube_001",
 							]
 						}
 					},

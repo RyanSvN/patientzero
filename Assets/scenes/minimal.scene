@@ -6,7 +6,7 @@
       "Flags": 0,
       "Name": "Ammo",
       "Position": "-156.618,-240.2165,2.004935",
-      "Scale": "3,3,3",
+      "Scale": "2.113074,2.113074,2.113074",
       "Tags": "ammo_pickup",
       "Enabled": true,
       "NetworkMode": 2,
@@ -16,7 +16,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "528566fe-09a9-4c9b-a8f2-f40ba3f69a67",
           "BodyGroups": 18446744073709551615,
-          "Model": "models/items/ammo/ammobox_01.vmdl",
+          "Model": "models/items/ammo.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
@@ -27,184 +27,15 @@
           "IsTrigger": true,
           "Scale": "8.800028,14.6,6.100037",
           "Static": false
-        }
-      ],
-      "Children": [
+        },
         {
-          "__guid": "31135d90-d8e5-46a7-b989-8923047e177f",
-          "Flags": 0,
-          "Name": "Spray",
-          "Position": "0,0,0",
-          "Rotation": "0,-0.7071067,0,0.7071068",
-          "Tags": "particles",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ParticleEffect",
-              "__guid": "81a2a470-01e0-49a3-a81a-820d14ead140",
-              "Alpha": {
-                "Type": "Curve",
-                "CurveA": [
-                  {
-                    "y": 1
-                  },
-                  {
-                    "x": 0.48029557,
-                    "y": 1,
-                    "in": 1.5365853,
-                    "out": -1.5365853
-                  },
-                  {
-                    "x": 1,
-                    "in": 1.312303,
-                    "out": -1.312303
-                  }
-                ],
-                "Constants": "1,0,0,0"
-              },
-              "ApplyColor": true,
-              "ApplyRotation": false,
-              "ApplyShape": true,
-              "Bounce": {
-                "Constants": "1,0,0,0"
-              },
-              "Brightness": {
-                "Constants": "1,0,0,0"
-              },
-              "Bumpiness": {},
-              "Collision": false,
-              "CollisionRadius": 1,
-              "Damping": {
-                "Constants": "1,0,0,0"
-              },
-              "DieOnCollisionChance": {},
-              "Force": false,
-              "ForceDirection": "0,0,-200",
-              "ForceScale": {
-                "Constants": "1,0,0,0"
-              },
-              "Friction": {
-                "Constants": "1,0,0,0"
-              },
-              "Gradient": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "GradientA": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "GradientB": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "ConstantA": "0.0324,0.97209,0,1",
-                "ConstantB": "0.24922,0.89302,0.28141,1"
-              },
-              "Lifetime": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "0.5,0.5,0,0"
-              },
-              "MaxParticles": 5000,
-              "PerParticleTimeScale": {
-                "Constants": "1,0.4,0,0"
-              },
-              "PreWarm": 0,
-              "PushStrength": {},
-              "Roll": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "0,360,0,0"
-              },
-              "Scale": {
-                "Type": "Curve",
-                "CurveA": {
-                  "rangey": "0,3",
-                  "frames": [
-                    {
-                      "in": -9.333329,
-                      "out": 9.333329
-                    },
-                    {
-                      "x": 0.03325123,
-                      "y": 1,
-                      "in": -0.056075174,
-                      "out": 0.056075174
-                    },
-                    {
-                      "x": 1,
-                      "in": 2.9152544,
-                      "out": -2.9152544
-                    }
-                  ]
-                },
-                "Constants": "1,0,0,0"
-              },
-              "SequenceId": {},
-              "SequenceSpeed": {
-                "Constants": "1,0,0,0"
-              },
-              "SequenceTime": {
-                "Constants": "1,0,0,0"
-              },
-              "SheetSequence": false,
-              "Space": "World",
-              "StartVelocity": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "200,200,0,0"
-              },
-              "Stretch": {},
-              "TimeScale": 0.23,
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ParticleSpriteRenderer",
-              "__guid": "7e76de61-e4e6-4313-a64d-47505121f0ab",
-              "Additive": false,
-              "BlurAmount": 0.5,
-              "BlurOpacity": 0.91,
-              "BlurSpacing": 0.73,
-              "DepthFeather": 0,
-              "FaceVelocity": false,
-              "FogStrength": 1,
-              "LeadingTrail": true,
-              "MotionBlur": false,
-              "Opaque": false,
-              "RotationOffset": 0,
-              "Scale": 0.98,
-              "Shadows": false,
-              "SortMode": "Unsorted",
-              "Texture": "materials/particles/shapes/square1.vtex"
-            },
-            {
-              "__type": "Sandbox.ParticleConeEmitter",
-              "__guid": "de5fb432-2f01-4137-a716-518358ebf339",
-              "Burst": 0,
-              "ConeAngle": 31.4,
-              "ConeFar": 50,
-              "ConeNear": 1,
-              "Delay": 0,
-              "DestroyOnEnd": false,
-              "Duration": 3,
-              "InVolume": false,
-              "Loop": true,
-              "OnEdge": false,
-              "Rate": 500
-            }
-          ]
+          "__type": "Sandbox.HighlightOutline",
+          "__guid": "2faffe3c-8739-4d35-90e9-87b033fd0179",
+          "Color": "0.07674,0.76744,0,1",
+          "InsideColor": "0,0,0,0",
+          "InsideObscuredColor": "0,0,0,0",
+          "ObscuredColor": "0,0,0,0.4",
+          "Width": 0.25
         }
       ]
     },
@@ -234,6 +65,15 @@
           "IsTrigger": true,
           "Scale": "14.89998,17.6,19.30001",
           "Static": false
+        },
+        {
+          "__type": "Sandbox.HighlightOutline",
+          "__guid": "3d230bc7-6382-4522-8487-1a552b4d6ffd",
+          "Color": "1,0,0,1",
+          "InsideColor": "0,0,0,0",
+          "InsideObscuredColor": "0,0,0,0",
+          "ObscuredColor": "0,0,0,0.4",
+          "Width": 0.25
         }
       ]
     },
@@ -263,6 +103,15 @@
           "IsTrigger": true,
           "Scale": "6.500046,15.59998,4.599993",
           "Static": false
+        },
+        {
+          "__type": "Sandbox.HighlightOutline",
+          "__guid": "faf659c2-c7c2-4560-b4bf-bc45f374d65a",
+          "Color": "1,0.83333,0,1",
+          "InsideColor": "0,0,0,0",
+          "InsideObscuredColor": "0,0,0,0",
+          "ObscuredColor": "0,0,0,0.4",
+          "Width": 0.25
         }
       ]
     },
@@ -436,7 +285,6 @@
           "Name": "Zombie",
           "Position": "-111.8634,109.511,-299.9799",
           "Tags": "enemy",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -444,8 +292,8 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
               "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/zombiemat.vmat",
-              "Model": "models/zombie/zombie.vmdl",
+              "MaterialOverride": "materials/zombie2.vmat",
+              "Model": "models/zombie/zombie2.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -518,7 +366,6 @@
           "Flags": 0,
           "Name": "Gradient Fog",
           "Position": "-2036.552,-2898.056,-865.6702",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -528,7 +375,7 @@
               "Color": "0.12655,0.13387,0.1814,0.51",
               "EndDistance": 800,
               "FalloffExponent": 1,
-              "Height": 134.49936,
+              "Height": 227.79958,
               "StartDistance": 64,
               "VerticalFalloffExponent": 2
             }
@@ -568,6 +415,212 @@
               "UpdateStrategy": "OnEnabled",
               "ZFar": 4096,
               "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "4c55fef4-1d5d-4c5e-9f41-c174072429f2",
+          "Flags": 0,
+          "Name": "fireballwithnoball",
+          "Position": "-110.0435,1995.292,-812.7666",
+          "Tags": "particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.LegacyParticleSystem",
+              "__guid": "3e73df7b-407f-47a7-ad9b-521ab270c4d9",
+              "ControlPoints": [],
+              "Looped": false,
+              "Particles": "particles/fireballwithnoball.vpcf",
+              "PlaybackSpeed": 1
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "1b871e82-d43c-47b0-ac07-c426b4fe4e29",
+              "Flags": 0,
+              "Name": "Fire Light",
+              "Position": "234.6428,230.8918,52.28782",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7e7a6b3b-736c-45cd-8d5b-0e9d6458b162",
+                  "Attenuation": 0.12,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.64651,0.32326,0,1",
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "5b8ea367-848d-421b-b012-8a7add4074e7",
+              "Flags": 0,
+              "Name": "Fire Light",
+              "Position": "-5.322021,11.47974,26.49107",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "49b61da8-b1d9-470e-9509-cdb41f5fa4e8",
+                  "Attenuation": 0.12,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.64651,0.32326,0,1",
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "1906262b-2117-4037-ac47-45c4cd32329f",
+          "Flags": 0,
+          "Name": "fireballwithnoball (1)",
+          "Position": "119.5801,2226.404,-812.7666",
+          "Tags": "particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.LegacyParticleSystem",
+              "__guid": "83b4c3e1-e9c2-43ec-a94f-2921850605b8",
+              "ControlPoints": [],
+              "Looped": false,
+              "Particles": "particles/fireballwithnoball.vpcf",
+              "PlaybackSpeed": 1
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "463fb19f-acfd-4e0e-8a57-f435989c1d7e",
+              "Flags": 0,
+              "Name": "Fire Light",
+              "Position": "5.019287,-0.2199707,28.22683",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "9d84e9e5-ce49-4edd-b0b9-ca089158debe",
+                  "Attenuation": 0.12,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.64651,0.32326,0,1",
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "dd93c871-4ff3-4d65-9e84-6893b3782ef3",
+          "Flags": 0,
+          "Name": "Source",
+          "Position": "14.22968,2175.974,-808.0656",
+          "Scale": "0.2785755,0.2785755,0.2785755",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "5ddd189e-44f1-4c52-9b18-b1d49684e2cb",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/lightemit/lightemit.vmat",
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "0,1,0,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "945e5e00-96fe-41dc-aa45-97a9f6c639fc",
+              "Flags": 0,
+              "Name": "Source Light",
+              "Position": "0,0,0",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "beccb3f7-91c3-47cf-8d00-af2c728197fa",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.14891,0.52558,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8cba80c4-c05d-454c-b7fc-c1612db40aaf",
+          "Flags": 0,
+          "Name": "Alarm Light",
+          "Position": "-3.367004,2041.872,-497.6334",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "fa9f99fd-add0-4322-aa8d-9eb64563e900",
+              "Attenuation": 0.12,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "1,1,1,1",
+              "Radius": 2000,
+              "Shadows": true
+            },
+            {
+              "__type": "FlashingLight",
+              "__guid": "b546a105-610a-45c3-84b3-8b6c99699778",
+              "Gradient": {
+                "color": [
+                  {
+                    "c": "0,0,0,1"
+                  },
+                  {
+                    "t": 0.113247864,
+                    "c": "0,0,0,1"
+                  },
+                  {
+                    "t": 0.2777778,
+                    "c": "0.8093,0,0,1"
+                  },
+                  {
+                    "t": 0.8333333,
+                    "c": "0.65532,0,0,1"
+                  },
+                  {
+                    "t": 0.9636752,
+                    "c": "0,0,0,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "Speed": 1
             }
           ]
         }
@@ -658,7 +711,7 @@
           "__guid": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
           "Flags": 0,
           "Name": "TopDownGPC",
-          "Position": "-665.2372,-557.3993,-745.5535",
+          "Position": "-665.2372,-557.3993,-544.7538",
           "Rotation": "0,0,0.7071067,0.7071068",
           "Tags": "player",
           "NetworkMode": 2,
@@ -785,7 +838,7 @@
               "__guid": "2a9c43cb-e7de-42b0-9cb7-45e526b0dc13",
               "Flags": 0,
               "Name": "Camera",
-              "Position": "0.0001068115,0,900",
+              "Position": "0.0001068115,0,1000",
               "Rotation": "0,0.7071068,0,0.7071068",
               "Tags": "maincamera",
               "Enabled": true,
@@ -808,6 +861,10 @@
                   "Viewport": "0,0,1,1",
                   "ZFar": 7601,
                   "ZNear": 205
+                },
+                {
+                  "__type": "Sandbox.Highlight",
+                  "__guid": "646f5329-5f40-4445-befb-b6d65ec961db"
                 }
               ]
             },
@@ -841,7 +898,7 @@
                       "NumberOfMags": 3,
                       "ObjectToSpawn": {
                         "_type": "gameobject",
-                        "go": "38c20855-2f1a-4b19-866b-055b9b110d7e"
+                        "go": "b4e9d72d-1624-46c4-8ee0-29889e8d80e7"
                       }
                     }
                   ],
@@ -947,6 +1004,90 @@
               "Damage": 10
             }
           ]
+        },
+        {
+          "__guid": "b4e9d72d-1624-46c4-8ee0-29889e8d80e7",
+          "Flags": 0,
+          "Name": "Bullet2",
+          "Position": "-1840.88,-2919.419,-756.4272",
+          "Scale": "0.09366267,0.09366267,0.09366267",
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "40f3b818-d526-4714-811d-eec2f346faaf",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/lightemit/lightemit.vmat",
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "Sandbox.HighlightOutline",
+              "__guid": "a50528d2-6510-484d-b56a-2d6eaef16a83",
+              "Color": "1000,1000,1000,1",
+              "InsideColor": "0,0,0,0",
+              "InsideObscuredColor": "0,0,0,0",
+              "ObscuredColor": "0,0,0,0.4",
+              "Width": 0.2
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "e92565f6-7921-48e3-910e-b3677f338322",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "758338ab-ee65-4504-a0dc-0e75d4946bdd",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 10,
+              "Static": false
+            },
+            {
+              "__type": "Bullet",
+              "__guid": "b87fbf56-92ea-439f-9924-483059dd4ac9",
+              "Damage": 10
+            },
+            {
+              "__type": "SelfDestructComponent",
+              "__guid": "392e77c9-11b8-42ff-bc79-1837f28aecaa",
+              "Seconds": 4
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "f9e75196-74ce-4805-87cb-3019231aa030",
+              "Flags": 0,
+              "Name": "Point Light",
+              "Position": "0,0,0",
+              "Scale": "0.3267941,0.3267941,0.3267941",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "aefdd046-2228-4e69-ae20-8dfa4db1edd6",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "10.19,0.33177,0.33177,1",
+                  "Radius": 100,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -977,6 +1118,36 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "7b78414f-e454-4403-bb38-d560a32e715d",
+      "Flags": 0,
+      "Name": "Doors",
+      "Position": "1055.648,120.0696,232.7198",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "f02caf64-eec8-4b0c-90ae-769c865c3480",
+          "Flags": 0,
+          "Name": "door",
+          "Position": "112.8501,9.479393,-56.7198",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a7bb4e16-17e3-4767-9064-0eba57fa5a62",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/door.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1002,15 +1173,16 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-27T17:47:12.2707106\u002B01:00",
+  "LastSaved": "2024-06-29T13:27:48.9790653\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
-    "apetavern.ammobox_01",
     "baik.healthkit_s",
     "facepunch.9mm_bullet",
+    "fish.shotgun-ammo",
     "gok.w_pistol",
     "hillrop.tombstone",
-    "snakecoil.gold_bar"
+    "snakecoil.gold_bar",
+    "tones.fireballwithnoball"
   ],
   "__version": 1
 }

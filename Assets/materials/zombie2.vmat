@@ -6,7 +6,7 @@
 	"TextureAmbientOcclusion"		"materials/default/default_ao.tga"
 	"g_flModelTintAmount"		"1.000000"
 	"g_vColorTint"		"[1.000000 1.000000 1.000000 0.000000]"
-	"TextureColor"		"models/zombie/zombietexture.png"
+	"TextureColor"		"materials/zombiematerialfin.png"
 	"g_flFadeExponent"		"1.000000"
 	"g_bFogEnabled"		"1"
 	"g_flMetalness"		"0.000000"
