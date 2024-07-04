@@ -1,6 +1,6 @@
 using System;
 
-public sealed class Enemy : Component, Component.ITriggerListener
+ public sealed class Enemy : Component, Component.ITriggerListener
 {
 	public List<TopDownGPC> Players { get; set; }
 	[Property]
@@ -17,9 +17,14 @@ public sealed class Enemy : Component, Component.ITriggerListener
 	[Property] 
 	public ModelRenderer ZombieModel { get; set; }
 
+	[Property] 
+	public GameObject AmmoPrefab { get; set; }
+
 
 	[Property]
 	public NavMeshAgent agent;
+
+	Random rnd = new Random();
 
 	public void OnTriggerEnter( Collider other )
 	{
@@ -51,6 +56,7 @@ public sealed class Enemy : Component, Component.ITriggerListener
 			GameObject.Destroy();
 			Log.Info("ZOMBIE DESTROYED!");
 			Sound.Play("zombie_die", Transform.Position);
+			DropAmmo();
 		}
 
 		if (Players.Count == 0)
@@ -71,5 +77,19 @@ public sealed class Enemy : Component, Component.ITriggerListener
 		var playerList = Scene.GetAllComponents<TopDownGPC>();
 		var sortedPlayers = playerList.OrderBy(x => Vector3.DistanceBetween(Transform.LocalPosition,x.Transform.LocalPosition));
 		Players = sortedPlayers.ToList();
+	}
+
+	private void DropAmmo()
+	{
+		float dropChance = 5f;
+		if (rnd.Next(1,10) < dropChance)
+		{
+			var ammoPrefab = AmmoPrefab.Clone( Transform.Position );
+			ammoPrefab.Enabled = true;
+		}
+		else
+		{
+			Log.Info("Ammo Not Dropped");
+		}
 	}
 }

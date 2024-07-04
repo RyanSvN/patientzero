@@ -1,11 +1,11 @@
 {
-  "__guid": "a9758129-c60b-4406-a4b1-df147aa42f2f",
+  "__guid": "87d312ec-1d71-4213-8240-0cd29bcc6e76",
   "GameObjects": [
     {
       "__guid": "16fc9b90-b3de-457c-99b8-a9c293a7ade3",
       "Flags": 0,
       "Name": "Ammo",
-      "Position": "-156.618,-240.2165,2.004935",
+      "Position": "-1424.13,-636.9699,2.004935",
       "Scale": "2.113074,2.113074,2.113074",
       "Tags": "ammo_pickup",
       "Enabled": true,
@@ -40,10 +40,48 @@
       ]
     },
     {
+      "__guid": "0ab67ed5-b0ba-4046-a8a0-176667237eb3",
+      "Flags": 0,
+      "Name": "Ammo (1)",
+      "Position": "-282.8527,-636.9699,2.004935",
+      "Scale": "2.113074,2.113074,2.113074",
+      "Tags": "ammo_pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "163d90b1-ad65-4c0c-a5f1-8d7ab2fcc292",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/items/ammo.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "14fb83ca-a1d3-416c-b06e-c93f3ccafae6",
+          "Center": "0,0.7,3.399997",
+          "IsTrigger": true,
+          "Scale": "8.800028,14.6,6.100037",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.HighlightOutline",
+          "__guid": "921530e9-53fb-4651-808f-4c07a84b0218",
+          "Color": "0.07674,0.76744,0,1",
+          "InsideColor": "0,0,0,0",
+          "InsideObscuredColor": "0,0,0,0",
+          "ObscuredColor": "0,0,0,0.4",
+          "Width": 0.25
+        }
+      ]
+    },
+    {
       "__guid": "3d9c9dce-0962-4972-a48d-114e2933b907",
       "Flags": 0,
       "Name": "Health",
-      "Position": "97.35835,-95.42053,0.637373",
+      "Position": "-1270.03,-632.5999,0.637373",
       "Scale": "3,3,3",
       "Tags": "health_pickup",
       "Enabled": true,
@@ -107,6 +145,44 @@
         {
           "__type": "Sandbox.HighlightOutline",
           "__guid": "faf659c2-c7c2-4560-b4bf-bc45f374d65a",
+          "Color": "1,0.83333,0,1",
+          "InsideColor": "0,0,0,0",
+          "InsideObscuredColor": "0,0,0,0",
+          "ObscuredColor": "0,0,0,0.4",
+          "Width": 0.25
+        }
+      ]
+    },
+    {
+      "__guid": "08148689-9f3b-40b6-aa31-d240c00327e1",
+      "Flags": 0,
+      "Name": "Currency (1)",
+      "Position": "598.9642,293.8442,-0.1695213",
+      "Scale": "3,3,3",
+      "Tags": "gold_pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "65829d89-1366-4049-badd-23156b7705e4",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/mymodels/gold_bar/gold_bar.vmdl",
+          "RenderType": "Off",
+          "Tint": "0.92093,0.78029,0.0771,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "74a38a00-7e68-4488-a51f-d4331f2b8b86",
+          "Center": "0,0,1.800001",
+          "IsTrigger": true,
+          "Scale": "6.500046,15.59998,4.599993",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.HighlightOutline",
+          "__guid": "92b5b0d0-8d0e-40d0-a0d8-89ce99445dfc",
           "Color": "1,0.83333,0,1",
           "InsideColor": "0,0,0,0",
           "InsideObscuredColor": "0,0,0,0",
@@ -309,6 +385,10 @@
               "Damage": 10,
               "Health": 100,
               "MaxHealth": 100,
+              "AmmoPrefab": {
+                "_type": "gameobject",
+                "go": "16fc9b90-b3de-457c-99b8-a9c293a7ade3"
+              },
               "ZombieModel": {
                 "_type": "component",
                 "component_id": "b0ea6c41-dc44-4e9a-92dd-5920960d1cc5",
@@ -343,10 +423,21 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "ae33f2d1-2abf-493e-a827-fd0073992c27",
-              "Center": "0,0,61.00006",
+              "Center": "0.7999998,0,52.40015",
               "IsTrigger": true,
-              "Scale": "74.30002,84.89975,121.7997",
+              "Scale": "36.7001,39.69968,108.9996",
               "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "e4f320e2-710c-4f82-b05b-6a2c1832bbb7",
+              "Flags": 0,
+              "Name": "ZombieHit",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
             }
           ]
         }
@@ -366,6 +457,7 @@
           "Flags": 0,
           "Name": "Gradient Fog",
           "Position": "-2036.552,-2898.056,-865.6702",
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -664,428 +756,12 @@
               "__guid": "bf7eac53-4068-40e1-b92f-68341b092a17",
               "PlayerPrefab": {
                 "_type": "gameobject",
-                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e"
+                "go": "e1f30052-009f-41f6-ad65-3d78a6ad83cc"
               },
               "SpawnPoint": {
                 "_type": "gameobject",
                 "go": "5c5f16cc-f83e-4e99-99d2-d1695d46a963"
               }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "4d272cc1-1bbc-447f-b329-3761d0ee4aba",
-      "Flags": 0,
-      "Name": "PlayerObjects",
-      "Position": "478.1472,552.7113,805.795",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Children": [
-        {
-          "__guid": "469e0f14-f710-48e4-85f9-426469c177b5",
-          "Flags": 0,
-          "Name": "Screen",
-          "Position": "-1753.442,-2907.75,-662.7173",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ScreenPanel",
-              "__guid": "ca4b8f08-85e6-4a25-882c-77ddb0f543d8",
-              "AutoScreenScale": true,
-              "Opacity": 1,
-              "Scale": 1,
-              "ZIndex": 100
-            },
-            {
-              "__type": "PlayerHUD",
-              "__guid": "97c42fdc-3516-43b9-b6f8-10824fb19cbc"
-            }
-          ]
-        },
-        {
-          "__guid": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-          "Flags": 0,
-          "Name": "TopDownGPC",
-          "Position": "-665.2372,-557.3993,-544.7538",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Tags": "player",
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "TopDownGPC",
-              "__guid": "0b6d73f8-a579-48cf-9c44-5ee7c0d395d7",
-              "Animator": {
-                "_type": "component",
-                "component_id": "a3cbaf66-e103-4b59-8895-67021b1c8685",
-                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-                "component_type": "CitizenAnimationHelper"
-              },
-              "Armor": 0,
-              "Camera": {
-                "_type": "gameobject",
-                "go": "2a9c43cb-e7de-42b0-9cb7-45e526b0dc13"
-              },
-              "CameraPosition": "-160,-32,96",
-              "Controller": {
-                "_type": "component",
-                "component_id": "57e0d7c6-13c8-48d6-95ca-9c573c9b455b",
-                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-                "component_type": "CharacterController"
-              },
-              "CrouchSpeed": 120,
-              "Currency": 0,
-              "CurrencyPickupValue": 1,
-              "EyePosition": "0,0,0",
-              "Health": 100,
-              "HealthPickupValue": 10,
-              "Inventory": [
-                "weapon_pistol"
-              ],
-              "JumpHeight": 300,
-              "MaxArmor": 100,
-              "MaxHealth": 100,
-              "RunSpeed": 300,
-              "WalkSpeed": 200
-            },
-            {
-              "__type": "PlayerFootsteps",
-              "__guid": "42d5af1f-31d6-4427-8f4f-900cc7f5d120",
-              "Source": {
-                "_type": "component",
-                "component_id": "df6ed015-7c07-4189-a9a2-a14f1a198d04",
-                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-                "component_type": "SkinnedModelRenderer"
-              }
-            },
-            {
-              "__type": "Sandbox.CharacterController",
-              "__guid": "57e0d7c6-13c8-48d6-95ca-9c573c9b455b",
-              "Acceleration": 10,
-              "Bounciness": 0.3,
-              "GroundAngle": 45,
-              "Height": 64,
-              "IgnoreLayers": "",
-              "Radius": 16,
-              "StepHeight": 18,
-              "UseCollisionRules": false
-            },
-            {
-              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-              "__guid": "a3cbaf66-e103-4b59-8895-67021b1c8685",
-              "BodyWeight": 1,
-              "EyesWeight": 1,
-              "HeadWeight": 1,
-              "IkRightHand": {
-                "_type": "gameobject",
-                "go": "e58cb900-50d5-4b03-b11a-a7f113631f6e"
-              },
-              "LookAtEnabled": false,
-              "Target": {
-                "_type": "component",
-                "component_id": "df6ed015-7c07-4189-a9a2-a14f1a198d04",
-                "go": "52ab271a-e4b0-4fb6-a8f3-c9e575d1554e",
-                "component_type": "SkinnedModelRenderer"
-              }
-            },
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "df6ed015-7c07-4189-a9a2-a14f1a198d04",
-              "BodyGroups": 341,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            },
-            {
-              "__type": "Sandbox.CapsuleCollider",
-              "__guid": "31877bda-1fa0-48cf-97ea-eb94f75753d5",
-              "End": "0,0,64.8233",
-              "IsTrigger": false,
-              "Radius": 5.799993,
-              "Start": "0,0,6.999996",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "0b8e1edf-cf84-4ade-abab-9c09849b30ca",
-              "__enabled": false,
-              "AngularDamping": 0,
-              "Gravity": false,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": true,
-                "Y": true,
-                "Z": true,
-                "Pitch": true,
-                "Yaw": true,
-                "Roll": true
-              },
-              "MassOverride": 0,
-              "MotionEnabled": false,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "2a9c43cb-e7de-42b0-9cb7-45e526b0dc13",
-              "Flags": 0,
-              "Name": "Camera",
-              "Position": "0.0001068115,0,1000",
-              "Rotation": "0,0.7071068,0,0.7071068",
-              "Tags": "maincamera",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.CameraComponent",
-                  "__guid": "4c9f4097-f1ec-419c-95a9-391b751d461e",
-                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
-                  "ClearFlags": "All",
-                  "FieldOfView": 60,
-                  "IsMainCamera": true,
-                  "Orthographic": false,
-                  "OrthographicHeight": 250,
-                  "Priority": 1,
-                  "RenderExcludeTags": "",
-                  "RenderTags": "",
-                  "TargetEye": "None",
-                  "Viewport": "0,0,1,1",
-                  "ZFar": 7601,
-                  "ZNear": 205
-                },
-                {
-                  "__type": "Sandbox.Highlight",
-                  "__guid": "646f5329-5f40-4445-befb-b6d65ec961db"
-                }
-              ]
-            },
-            {
-              "__guid": "e58cb900-50d5-4b03-b11a-a7f113631f6e",
-              "Flags": 0,
-              "Name": "RightHand",
-              "Position": "28.42061,-8.959467,47.608",
-              "Rotation": "0.8660254,-0.00000003893861,-0.0000000161289,0.5",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Children": [
-                {
-                  "__guid": "056b490b-de08-4f62-a7c6-f2321b338abe",
-                  "Flags": 0,
-                  "Name": "Gun",
-                  "Position": "-15.18252,4.274201,-6.739692",
-                  "Rotation": "-0.1294095,0.8365164,-0.2241438,0.482963",
-                  "Tags": "gun",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
-                  "Components": [
-                    {
-                      "__type": "Gun",
-                      "__guid": "6855866a-dba1-4ca4-b4d8-a3b5b1d2b5ef",
-                      "AmmoPerMag": 8,
-                      "CurrentAmmoInMag": 0,
-                      "CurrentMags": 0,
-                      "NumberOfMags": 3,
-                      "ObjectToSpawn": {
-                        "_type": "gameobject",
-                        "go": "b4e9d72d-1624-46c4-8ee0-29889e8d80e7"
-                      }
-                    }
-                  ],
-                  "Children": [
-                    {
-                      "__guid": "3b6d1a7f-a2d6-40d8-8383-d5d3e28a1a15",
-                      "Flags": 0,
-                      "Name": "Cube (1)",
-                      "Position": "-5.157825,-5.25624,8.93377",
-                      "Rotation": "0.6123728,-0.3535529,-0.3535531,-0.6123725",
-                      "Scale": "1.318159,0.9718226,1.053198",
-                      "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
-                      "Components": [
-                        {
-                          "__type": "Sandbox.ModelRenderer",
-                          "__guid": "9ef58836-5217-433d-887c-db6fe8977ecc",
-                          "BodyGroups": 18446744073709551615,
-                          "Model": "models/weapons/w_pistol.vmdl",
-                          "RenderType": "On",
-                          "Tint": "1,1,1,1"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "e5771f8e-9f71-4c04-b4a2-4c91428fa082",
-              "Flags": 0,
-              "Name": "Name Tag",
-              "Position": "0,0,155.315",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.WorldPanel",
-                  "__guid": "517448ae-5e1e-4501-82eb-d46b7482e936",
-                  "HorizontalAlign": "Center",
-                  "InteractionRange": 1000,
-                  "LookAtCamera": true,
-                  "PanelSize": "2048,512",
-                  "RenderScale": 1,
-                  "VerticalAlign": "Center"
-                },
-                {
-                  "__type": "NameTagPanel",
-                  "__guid": "e847e8d9-9f25-4e3b-860e-8de511d1a4e6",
-                  "Name": "Mingebag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "38c20855-2f1a-4b19-866b-055b9b110d7e",
-          "Flags": 0,
-          "Name": "Bullet",
-          "Position": "-1807.849,-3022.515,-768.0701",
-          "Scale": "3,3,3",
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "2c01d610-4d55-41f4-9aed-db51f8beb3d0",
-              "BodyGroups": 1,
-              "Model": "models/weapons/sbox_ammo/9mm_bullet/9mm_bullet.vmdl",
-              "RenderType": "Off",
-              "Tint": "0,0.96667,1,1"
-            },
-            {
-              "__type": "SelfDestructComponent",
-              "__guid": "6b8422dc-ce31-4f92-9008-147d4055941a",
-              "Seconds": 3
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "dd4dc850-96ce-4ba9-bbcc-bc3fdccecc20",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {},
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
-              "__type": "Sandbox.SphereCollider",
-              "__guid": "eda0c67d-2271-4dde-bd59-c8006b68bb8b",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Radius": 10,
-              "Static": false
-            },
-            {
-              "__type": "Bullet",
-              "__guid": "29918afb-0b7f-4b1b-8502-8f02f1a37ff7",
-              "Damage": 10
-            }
-          ]
-        },
-        {
-          "__guid": "b4e9d72d-1624-46c4-8ee0-29889e8d80e7",
-          "Flags": 0,
-          "Name": "Bullet2",
-          "Position": "-1840.88,-2919.419,-756.4272",
-          "Scale": "0.09366267,0.09366267,0.09366267",
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "40f3b818-d526-4714-811d-eec2f346faaf",
-              "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/lightemit/lightemit.vmat",
-              "Model": "models/dev/sphere.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "Sandbox.HighlightOutline",
-              "__guid": "a50528d2-6510-484d-b56a-2d6eaef16a83",
-              "Color": "1000,1000,1000,1",
-              "InsideColor": "0,0,0,0",
-              "InsideObscuredColor": "0,0,0,0",
-              "ObscuredColor": "0,0,0,0.4",
-              "Width": 0.2
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "e92565f6-7921-48e3-910e-b3677f338322",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {},
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
-              "__type": "Sandbox.SphereCollider",
-              "__guid": "758338ab-ee65-4504-a0dc-0e75d4946bdd",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Radius": 10,
-              "Static": false
-            },
-            {
-              "__type": "Bullet",
-              "__guid": "b87fbf56-92ea-439f-9924-483059dd4ac9",
-              "Damage": 10
-            },
-            {
-              "__type": "SelfDestructComponent",
-              "__guid": "392e77c9-11b8-42ff-bc79-1837f28aecaa",
-              "Seconds": 4
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "f9e75196-74ce-4805-87cb-3019231aa030",
-              "Flags": 0,
-              "Name": "Point Light",
-              "Position": "0,0,0",
-              "Scale": "0.3267941,0.3267941,0.3267941",
-              "Tags": "light_point,light",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "aefdd046-2228-4e69-ae20-8dfa4db1edd6",
-                  "Attenuation": 10,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "10.19,0.33177,0.33177,1",
-                  "Radius": 100,
-                  "Shadows": true
-                }
-              ]
             }
           ]
         }
@@ -1131,19 +807,2434 @@
         {
           "__guid": "f02caf64-eec8-4b0c-90ae-769c865c3480",
           "Flags": 0,
-          "Name": "door",
-          "Position": "112.8501,9.479393,-56.7198",
+          "Name": "DoorController",
+          "Position": "113.9626,9.479393,-56.7198",
+          "Tags": "trigger,door1,particles",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
+              "__type": "DoorController",
+              "__guid": "fcb2bf47-97ab-4bbf-8ca3-6bf2952bbabb",
+              "doorCost": 200,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "7391ba7b-f3fd-46ee-b88d-1c33806b075e"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "1ba8a0ea-0b54-4d88-9a69-2b82caee0d24"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "b6ec32cd-7770-44cb-bb0a-3f3132e63019"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "69a53529-5a49-49b7-bde5-cdb20d0eda70",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "ff9c0351-6330-4fb6-8bdd-7b0361e1a66f",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0,-0.841156,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "72384cdf-7d84-4c90-a4a0-070a4a5f54e7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/door.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "d4548711-b505-439c-8a2c-aa8d4d0ca082",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "7391ba7b-f3fd-46ee-b88d-1c33806b075e",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "5d3aa40f-8d84-439f-9638-307704e5e176",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "06a4db9f-675f-4073-a530-407a37d7b4a7",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "fcb2bf47-97ab-4bbf-8ca3-6bf2952bbabb",
+                    "go": "f02caf64-eec8-4b0c-90ae-769c865c3480",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "b6ec32cd-7770-44cb-bb0a-3f3132e63019",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0,0,0",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "2209e8b6-6896-460f-8646-b21162756328",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "94ae250f-b12a-4eaa-abbc-d795dd33925e",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "c9e2a053-9e04-41fb-ad31-65f6028f9455",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "1ba8a0ea-0b54-4d88-9a69-2b82caee0d24",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0,0,0",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "bf725620-c63e-4083-ab5d-804d37903675",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "cbe44003-b722-41d9-82a4-958aa7e5963c",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "ba729fa9-a7d9-4afd-9010-b8dc96b5851b",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "b964d4ca-482d-4d67-ab18-b44aa5707c3e",
+          "Flags": 0,
+          "Name": "DoorController",
+          "Position": "1391.309,1751.394,-56.7198",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Scale": "1,1.470962,1",
+          "Tags": "trigger,door1,particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "DoorController",
+              "__guid": "5ccf2878-cab7-4466-88de-04c3aee83217",
+              "doorCost": 350,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "778c997e-b9a5-47ab-84fe-2474fc548458"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "d1688be7-015f-4c88-bf70-b77dea63d427"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "b9352bfb-853b-4bba-8d8b-6fa696a62329"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "42266ea8-4110-4fc4-a033-7f025ed32f17",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "556e0f60-76c1-441f-af22-c4b3a4fa4055",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0.0000001790759,-0.8405252,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "6287fc74-48ae-40c2-bbe7-4665073ea8a9",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/door.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "7bfa2b18-f97d-4f5b-8e05-55f6cbff77a7",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "778c997e-b9a5-47ab-84fe-2474fc548458",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "301a79aa-e590-4a2d-bcf2-9ee826f05b02",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "ee210399-622c-4bb0-9a1e-14912650cee1",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "5ccf2878-cab7-4466-88de-04c3aee83217",
+                    "go": "b964d4ca-482d-4d67-ab18-b44aa5707c3e",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "b9352bfb-853b-4bba-8d8b-6fa696a62329",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0,0,0",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "1b3c1ff8-f586-49db-a82b-eff3cc2753ad",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "63af08b3-cf69-4d7c-9964-1eceff1d0dbf",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "30bffe61-9f19-4e93-aa07-262944dd2612",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "d1688be7-015f-4c88-bf70-b77dea63d427",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0,0,0",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "679b87e9-afcd-43a0-bf40-0bdb0cc6f202",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "22cfb591-de88-47fb-b02f-eb6995adafd7",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "7019cc80-0707-472b-a5d9-fab3bbc18dfd",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "03047018-ca45-4c88-a05d-658dc041104c",
+          "Flags": 0,
+          "Name": "DoorController",
+          "Position": "-1843.79,259.1126,-56.7198",
+          "Tags": "trigger,door1,particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "DoorController",
+              "__guid": "7270533e-2884-4b73-8a34-0c82a5382858",
+              "doorCost": 100,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "094d21b0-96f7-43f4-bb7a-7e1239b17848"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "fdf20ce0-f0d7-478f-8b5b-6a4556c37f25"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "1e27a263-22aa-414c-963b-3f9f9625c5c5"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "5d288bbd-4e70-402e-8efd-eb04d27df247",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "2c9a6dbf-c6a5-49a6-8c1b-4edbe1a4d5f8",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0,-0.841156,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2986b5c2-f934-4dd8-b660-c70450464435",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/door.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "cd585a22-3183-4916-9258-fdf20869ed41",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "094d21b0-96f7-43f4-bb7a-7e1239b17848",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "25e9d5e9-e1fe-4dc5-b8e0-798bd77c9af2",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "37a8f677-2e18-439f-ab41-f1101604de45",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "7270533e-2884-4b73-8a34-0c82a5382858",
+                    "go": "03047018-ca45-4c88-a05d-658dc041104c",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "1e27a263-22aa-414c-963b-3f9f9625c5c5",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0,2.922241,0",
+              "Scale": "1,0.6026633,1",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "83037c43-6348-440c-b8b6-90d3b9d3ae18",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "bc0efe20-df11-44a1-8828-e501d951003f",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "9d26543d-91c8-47dc-8a5b-8e472b57c561",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "fdf20ce0-f0d7-478f-8b5b-6a4556c37f25",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0,2.922241,0",
+              "Scale": "1,0.6026633,1",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "e248a6ec-4741-49b7-9be9-6583ae57e427",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "5500e274-f508-4236-ab6b-c1809ac4eb75",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "0a9b5785-7eff-4e2d-a039-5bf829ae217b",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "d30ad03d-3fd7-40cd-8ab5-0fc943d9dc06",
+          "Flags": 0,
+          "Name": "DoorController",
+          "Position": "-3116.79,887.0397,-56.7198",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Tags": "trigger,door1,particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "DoorController",
+              "__guid": "08504856-e522-4ae6-b007-5aee28588d3e",
+              "doorCost": 250,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "47774b8e-72c2-443f-87c2-a0ec3219c7d7"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "3cf54cf2-587e-4a0b-901c-7373f456e236"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "96ad0ec0-9b51-4709-8cb8-05dff9a2ff70"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e1ff61c7-7ea4-4c5b-8492-12c8b9e20fe9",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a9956a11-6eda-4edd-92d3-1a28f230f15a",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0,-0.841156,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "62c539b6-f686-4da6-a889-498e4ecdd43a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/door.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "f6ad0fa6-9f72-4520-a970-8b8946144658",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "47774b8e-72c2-443f-87c2-a0ec3219c7d7",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "5729c784-b007-411c-8121-2d3cbb597098",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "8a088745-b69f-495b-98aa-0f97d294e45a",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "08504856-e522-4ae6-b007-5aee28588d3e",
+                    "go": "d30ad03d-3fd7-40cd-8ab5-0fc943d9dc06",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "96ad0ec0-9b51-4709-8cb8-05dff9a2ff70",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0.0001186707,-19.01196,0",
+              "Scale": "1,0.6026633,1",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "17d7a8a7-e49b-47d3-b17c-ded6aff97a52",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "491caa30-ef58-4b29-aac5-b06015769fc7",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "2219f167-0ca7-4182-95a2-eace04ded580",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "3cf54cf2-587e-4a0b-901c-7373f456e236",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0.0001186707,-19.01196,0",
+              "Scale": "1,0.6026633,1",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "4fa6f3e9-a692-42c5-92df-c9bc7013ad56",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "51d8f101-71e1-49a6-9a3b-e221d07a9fe0",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "0b6456a1-1e9a-472d-8359-62d596536b30",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "41d272f6-e319-4bc7-bbf0-2ccaccaf7f3f",
+          "Flags": 0,
+          "Name": "DoorController",
+          "Position": "-1615.083,2087.998,-56.7198",
+          "Tags": "trigger,door1,particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "DoorController",
+              "__guid": "aadb6a77-d752-462c-9e4f-707f62aa3424",
+              "doorCost": 500,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "da0ce5d4-0e77-446a-b8af-0f6c66c09051"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "6bf1e998-687a-4e00-aedb-3578e8b62087"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "130949f3-de68-45ba-bf59-e110ed78e1df"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "61fce16c-23b8-417f-8f0e-2558da67b675",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "fd6a6323-7e69-42a2-bce9-81535ee242ae",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0,-0.841156,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "99503527-fbcf-4791-a552-d4c50f6bbcc4",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/metaldoor.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "9e49595d-2229-4416-b530-66e375e193e8",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "da0ce5d4-0e77-446a-b8af-0f6c66c09051",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "9396605e-d778-40dc-a5f9-965f2f9ea5a4",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "b7a280ba-cffc-4702-9590-7e53feb9727a",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "aadb6a77-d752-462c-9e4f-707f62aa3424",
+                    "go": "41d272f6-e319-4bc7-bbf0-2ccaccaf7f3f",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "130949f3-de68-45ba-bf59-e110ed78e1df",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0.0001220703,-0.2053223,0",
+              "Scale": "1,0.9775223,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "8fd5f1fb-4afc-4471-b277-f051d8885af6",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "90e27220-43b4-42b8-a168-22f9560d8b5f",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "b6b2620a-f122-4855-9e14-27022a4d48ba",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "6bf1e998-687a-4e00-aedb-3578e8b62087",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0.0001220703,-0.2053223,0",
+              "Scale": "1,0.9775223,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "ad480bd5-3d7b-4ca3-92e6-9394ffcbc68a",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "70fbe395-ff12-46fb-ae57-1c10044bb4d4",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "7a738815-a9b4-4cd0-a220-5aa1ac022fb2",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7d2355e3-6681-479a-9138-50cdeadf8667",
+          "Flags": 0,
+          "Name": "DoorController",
+          "Position": "847.5214,2796.487,-51.79823",
+          "Scale": "1,1,1.025698",
+          "Tags": "trigger,door1,particles",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "DoorController",
+              "__guid": "5dbc1f46-0570-49df-b20d-05800b9da172",
+              "doorCost": 500,
+              "doorMessage": {
+                "_type": "gameobject",
+                "go": "aa57da53-03c8-4a20-aa7d-bb778b3b65a7"
+              },
+              "doorParticlesBlue": {
+                "_type": "gameobject",
+                "go": "5b3646b9-abd8-4a40-85d9-8c79fab146f9"
+              },
+              "doorParticlesRed": {
+                "_type": "gameobject",
+                "go": "daf0aeed-44b9-49b0-bedb-643496ea0771"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "25a3157a-17b6-4a66-809a-ef9a0ef9093a",
+              "Center": "-27.80006,0,-172.1006",
+              "IsTrigger": true,
+              "Scale": "217.6,310.6997,3.400243",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "54ec0f3e-384d-48f6-8981-7f573997fe21",
+              "Flags": 0,
+              "Name": "Door",
+              "Position": "0,-0.841156,0",
+              "Scale": "1,1.02,1",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "037d4a99-594b-40fc-a003-156afc6ea42f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/metaldoor.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "e2449cc3-601e-461b-b8ae-b37391f9f747",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Scale": "33.00005,318.4009,343.2003",
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "aa57da53-03c8-4a20-aa7d-bb778b3b65a7",
+              "Flags": 0,
+              "Name": "DoorMessage",
+              "Position": "-5.574829,0,246.5506",
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "59d3ee78-f2a1-4f9c-a11f-f9fb7cba1931",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": true,
+                  "PanelSize": "3000,1074.4",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "DoorPanel",
+                  "__guid": "66c77a7e-2e9a-47b9-8118-1f8e8e635899",
+                  "DoorController": {
+                    "_type": "component",
+                    "component_id": "5dbc1f46-0570-49df-b20d-05800b9da172",
+                    "go": "7d2355e3-6681-479a-9138-50cdeadf8667",
+                    "component_type": "DoorController"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "daf0aeed-44b9-49b0-bedb-643496ea0771",
+              "Flags": 0,
+              "Name": "DoorParticlesRed",
+              "Position": "0.0001220703,-5.407471,0",
+              "Scale": "1,0.5771509,0.980574",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "02c9a144-ad93-4ae7-aa30-7beb008a8818",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,0.11163,0.11163,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "833eb876-db60-45a8-86f3-b141fce40c31",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "5626d442-9d2d-476a-a445-7f367e8ce30c",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            },
+            {
+              "__guid": "5b3646b9-abd8-4a40-85d9-8c79fab146f9",
+              "Flags": 0,
+              "Name": "DoorParticlesBlue",
+              "Position": "0.0001220703,-5.407471,0",
+              "Scale": "1,0.5771509,0.980574",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "ac557442-8c6a-41c3-bed5-45d45fbb4ad8",
+                  "Alpha": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 0,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,0",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,1,1,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "MaxParticles": 10000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "PreWarm": 0.5,
+                  "PushStrength": {},
+                  "Roll": {},
+                  "Scale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "0.31765,0.76863,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "658ee0e3-4e3d-4958-9550-7ffc1f6b58c0",
+                  "Additive": true,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.5,
+                  "BlurSpacing": 0.5,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 3,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleBoxEmitter",
+                  "__guid": "5e97cb36-9d42-410e-8253-baef7b378959",
+                  "Burst": 0,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 10,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Rate": 2000,
+                  "Size": "50,322.5003,356.8007"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "1f11b48c-2415-44de-94e0-4f79a2cf37aa",
+      "Flags": 0,
+      "Name": "PlayerObjects",
+      "Position": "7.025049,-383.0095,158.7799",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "e1f30052-009f-41f6-ad65-3d78a6ad83cc",
+          "Flags": 0,
+          "Name": "TopDownGPC",
+          "Position": "0,0,-126.5864",
+          "Tags": "player",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "d3955186-10d1-4eff-88c9-6e2b1ea53530",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            },
+            {
+              "__type": "TopDownGPC",
+              "__guid": "0e3af447-355f-4b82-8cc8-e47debadf1be",
+              "Animator": {
+                "_type": "component",
+                "component_id": "fb5f7703-bbaa-4579-bbe9-529329dec60a",
+                "go": "e1f30052-009f-41f6-ad65-3d78a6ad83cc",
+                "component_type": "CitizenAnimationHelper"
+              },
+              "Armor": 0,
+              "Camera": {
+                "_type": "gameobject",
+                "go": "e1c1f87c-5e77-4928-9af2-de207c064b8c"
+              },
+              "CameraPosition": "-160,-32,96",
+              "Controller": {
+                "_type": "component",
+                "component_id": "590f540a-2f17-4cbc-a764-8def546d59fa",
+                "go": "e1f30052-009f-41f6-ad65-3d78a6ad83cc",
+                "component_type": "CharacterController"
+              },
+              "CrouchSpeed": 120,
+              "Currency": 0,
+              "CurrencyPickupValue": 100,
+              "EyePosition": "0,0,0",
+              "Health": 100,
+              "HealthPickupValue": 10,
+              "Inventory": [
+                "weapon_pistol"
+              ],
+              "JumpHeight": 300,
+              "MaxArmor": 100,
+              "MaxHealth": 100,
+              "RunSpeed": 300,
+              "WalkSpeed": 200
+            },
+            {
+              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+              "__guid": "fb5f7703-bbaa-4579-bbe9-529329dec60a",
+              "BodyWeight": 1,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "IkRightHand": {
+                "_type": "gameobject",
+                "go": "e16048bf-6e09-4563-b348-2cfb83011f59"
+              },
+              "LookAtEnabled": false,
+              "Target": {
+                "_type": "component",
+                "component_id": "d3955186-10d1-4eff-88c9-6e2b1ea53530",
+                "go": "e1f30052-009f-41f6-ad65-3d78a6ad83cc",
+                "component_type": "SkinnedModelRenderer"
+              }
+            },
+            {
+              "__type": "Sandbox.CharacterController",
+              "__guid": "590f540a-2f17-4cbc-a764-8def546d59fa",
+              "Acceleration": 10,
+              "Bounciness": 0.3,
+              "GroundAngle": 45,
+              "Height": 64,
+              "IgnoreLayers": "",
+              "Radius": 16,
+              "StepHeight": 18,
+              "UseCollisionRules": false
+            },
+            {
+              "__type": "PlayerFootsteps",
+              "__guid": "21c0ab6d-d7f3-475e-b972-6dabf91dbb56",
+              "Source": {
+                "_type": "component",
+                "component_id": "d3955186-10d1-4eff-88c9-6e2b1ea53530",
+                "go": "e1f30052-009f-41f6-ad65-3d78a6ad83cc",
+                "component_type": "SkinnedModelRenderer"
+              }
+            },
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "462ba3cf-800c-45a8-921e-96e701afc7e8",
+              "End": "1.4,0,66.5001",
+              "IsTrigger": true,
+              "Radius": 10,
+              "Start": "0,0,0",
+              "Static": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "e1c1f87c-5e77-4928-9af2-de207c064b8c",
+              "Flags": 0,
+              "Name": "Camera",
+              "Position": "-102.6419,10.06412,96.75376",
+              "Rotation": "0.006376179,0.1303704,-0.04843184,0.9902613",
+              "Tags": "maincamera",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.CameraComponent",
+                  "__guid": "370278fa-f4f5-4082-b788-42ca4b47e32d",
+                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                  "ClearFlags": "All",
+                  "FieldOfView": 60,
+                  "IsMainCamera": true,
+                  "Orthographic": false,
+                  "OrthographicHeight": 1204,
+                  "Priority": 1,
+                  "RenderExcludeTags": "",
+                  "RenderTags": "",
+                  "TargetEye": "None",
+                  "Viewport": "0,0,1,1",
+                  "ZFar": 10000,
+                  "ZNear": 10
+                },
+                {
+                  "__type": "Sandbox.Highlight",
+                  "__guid": "e8dbf1a8-1ee5-4ada-91f8-394e29369e9a"
+                },
+                {
+                  "__type": "Sandbox.Sharpen",
+                  "__guid": "e14e5f98-d591-4dcf-808d-69f0f45884ab",
+                  "__enabled": false,
+                  "Scale": 0.5
+                },
+                {
+                  "__type": "Sandbox.Bloom",
+                  "__guid": "34f4331f-1107-4751-a112-c4a838e2059d",
+                  "BloomColor": {
+                    "color": [
+                      {
+                        "c": "1,1,1,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,1,1"
+                      }
+                    ],
+                    "alpha": []
+                  },
+                  "BloomCurve": [
+                    {
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1,
+                      "y": 1
+                    }
+                  ],
+                  "Mode": "Screen",
+                  "Strength": 2,
+                  "Threshold": 0.5,
+                  "ThresholdWidth": 0
+                },
+                {
+                  "__type": "Sandbox.Vignette",
+                  "__guid": "49015c14-514e-4ab9-a48c-0a0a2dfa6f64",
+                  "Center": "0.5,0.5",
+                  "Color": "0,0,0,0.7",
+                  "Intensity": 0.8,
+                  "Roundness": 0,
+                  "Smoothness": 0.9
+                }
+              ]
+            },
+            {
+              "__guid": "5e21d75e-6701-482d-bf45-b4fca63b5579",
+              "Flags": 0,
+              "Name": "PlayerUI",
+              "Position": "0,0,76.58195",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Children": [
+                {
+                  "__guid": "6fd08e61-558a-4ade-ba5a-7b9ec49eca42",
+                  "Flags": 0,
+                  "Name": "World",
+                  "Position": "0,0,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.WorldPanel",
+                      "__guid": "9f93664f-c3eb-41a4-aa9f-df2f9c66a6a3",
+                      "HorizontalAlign": "Center",
+                      "InteractionRange": 1000,
+                      "LookAtCamera": true,
+                      "PanelSize": "1325.499,520.3998",
+                      "RenderScale": 1,
+                      "VerticalAlign": "Center"
+                    },
+                    {
+                      "__type": "NameTagPanel",
+                      "__guid": "e8399692-7fe7-46a7-90cb-baccd9cc3d84",
+                      "Name": "Mingebag"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e56da352-7719-4bf1-8230-1dadf226cc08",
+                  "Flags": 0,
+                  "Name": "PlayerHUD",
+                  "Position": "0,0,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ScreenPanel",
+                      "__guid": "7972e4a0-c9fa-48e5-b708-b885bf586823",
+                      "AutoScreenScale": true,
+                      "Opacity": 1,
+                      "Scale": 1,
+                      "ZIndex": 100
+                    },
+                    {
+                      "__type": "PlayerHUD",
+                      "__guid": "e93332b3-2d3e-4c60-859a-3d9834a272a9",
+                      "glass": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "e16048bf-6e09-4563-b348-2cfb83011f59",
+              "Flags": 0,
+              "Name": "RightHand",
+              "Position": "16.78746,-9.55656,50.39154",
+              "Rotation": "0.7071068,0,0,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Children": [
+                {
+                  "__guid": "9da879db-de16-47a8-9eb9-dfd906c58101",
+                  "Flags": 0,
+                  "Name": "Shoot",
+                  "Position": "-32.65466,-16.66546,3.605471",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Gun",
+                      "__guid": "15348e65-6f63-49f5-a51b-e96a28e5f7e3",
+                      "AmmoPerMag": 16,
+                      "CurrentAmmoInMag": 0,
+                      "CurrentMags": 0,
+                      "NumberOfMags": 3,
+                      "ObjectToSpawn": {
+                        "_type": "gameobject",
+                        "go": "55b0180f-1ea3-4dd3-89d8-54bc3f9cfaf2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "__guid": "79608d35-c567-45d4-aa5c-b22bdd4f88e8",
+                  "Flags": 0,
+                  "Name": "Object",
+                  "Position": "6.161936,-0.8113885,-1.743683",
+                  "Rotation": "-0.0000001376788,0.7071067,0.7071068,0.0000001376788",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ModelRenderer",
+                      "__guid": "2d5b0536-c68f-4232-9abd-cfa25061f722",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "models/weapons/w_pistol.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "55b0180f-1ea3-4dd3-89d8-54bc3f9cfaf2",
+          "Flags": 0,
+          "Name": "Bullet",
+          "Position": "-1223.05,-2033.026,-96.74308",
+          "Scale": "0.08959945,0.08959945,0.08959945",
+          "Tags": "light_point,light",
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "a7bb4e16-17e3-4767-9064-0eba57fa5a62",
+              "__guid": "de2ef1f6-bcb0-48dd-9495-6ab499b7985f",
               "BodyGroups": 18446744073709551615,
-              "Model": "models/door.vmdl",
+              "MaterialOverride": "materials/lightemit/lightemit.vmat",
+              "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.HighlightOutline",
+              "__guid": "da9b5276-c667-432e-baec-4d3108e3e78b",
+              "Color": "1000,933.3333,0,1",
+              "InsideColor": "0,0,0,0",
+              "InsideObscuredColor": "0,0,0,0",
+              "ObscuredColor": "0,0,0,0.4",
+              "Width": 0.3
+            },
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "59d23dc9-8521-4f9a-b8fc-c8a919be1ded",
+              "Attenuation": 10,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "1,0.9,0,1",
+              "Radius": 100,
+              "Shadows": true
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "09c4ce33-928d-406b-85de-4267e87a6e8c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 10,
+              "Static": false
+            },
+            {
+              "__type": "Bullet",
+              "__guid": "ddfe1635-2c90-490b-a6aa-d543d4898b17",
+              "Damage": 10
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "6ca48f73-55d9-440b-bf55-3f2516b5381a",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "SelfDestructComponent",
+              "__guid": "d7650ca9-3279-4fc7-b831-2e140d48ef37",
+              "Seconds": 0.5
             }
           ]
         }
@@ -1173,11 +3264,9 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-29T13:27:48.9790653\u002B01:00",
   "ResourceVersion": 1,
   "__references": [
     "baik.healthkit_s",
-    "facepunch.9mm_bullet",
     "fish.shotgun-ammo",
     "gok.w_pistol",
     "hillrop.tombstone",

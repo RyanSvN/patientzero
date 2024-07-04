@@ -24,7 +24,6 @@
 			<p>Enemies Remaining</p>
 		</div>
 	</div>
-
 	<div class="healthbars">
 		<div class="healthbar">
 			<div class="inner">
@@ -32,6 +31,10 @@
 			</div>
 		</div>
 	</div>
+@* 	<div class="image">
+		<image src="ui/test.png"></image>
+	</div> *@
+	
 </root>
 
 @code
@@ -42,6 +45,8 @@
 	Gun Gun { get; set; }
 
 	EnemyManager EnemyManager { get; set; }
+
+	[Property] Texture glass { get; set; }
 
 	protected override void OnFixedUpdate()
 	{

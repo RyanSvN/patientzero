@@ -1,5 +1,4 @@
 using System;
-using System.Collections.ObjectModel;
 
 public sealed class Bullet : Component, Component.ITriggerListener
 {
@@ -14,7 +13,21 @@ public sealed class Bullet : Component, Component.ITriggerListener
 			zombie.Health -= Damage;
 			zombie.Health = Math.Clamp( zombie.Health, 0, zombie.MaxHealth );
 			Sound.Play("zombie_die", zombie.Transform.Position);
-			// zombie.ZombieModel.Tint = "#5E0000";
+			ApplyTint(zombie);
+			DelayedDestroy();
 		}
 	}
+
+	private async void ApplyTint(Enemy zombie)
+	{
+		zombie.ZombieModel.Tint = "#5E0000";
+        await Task.Delay(50); // Wait for 500 milliseconds (half a second)
+        zombie.ZombieModel.Tint = "#FFFFFF";
+	}
+
+	private async void DelayedDestroy()
+    {
+        await Task.Delay(50); // Wait for 500 milliseconds (half a second)
+        GameObject.Destroy();
+    }
 }

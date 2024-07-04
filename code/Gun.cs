@@ -4,7 +4,7 @@ public sealed class Gun : Component
 	[Property] public GameObject ObjectToSpawn { get; set; }
 
 	[Property] public int NumberOfMags = 3;
-	[Property] public int AmmoPerMag = 8;
+	[Property] public int AmmoPerMag = 16;
 	[Property] public int CurrentAmmoInMag;
 	[Property] public int CurrentMags;
 	private Vector3 SoundLocation;

@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Sandbox.Citizen;
 
 /// <summary>
@@ -21,9 +22,12 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 
 
 	[Category( "Pickups" )] [Property] public float HealthPickupValue { get; set; } = 10;
-	[Property] public float CurrencyPickupValue { set; get; } = 1;
+	[Property] public float CurrencyPickupValue { set; get; } = 100;
 
 	public TimeSince TimeAlive { get; set; } = 0f;
+
+	public DoorController doorInRange = null;
+
 
 	/// INVENTORY
 	[Property]
@@ -106,6 +110,15 @@ public sealed class TopDownGPC : Component, Component.ITriggerListener
 		EyeAngles = EyeAngles.WithPitch( MathX.Clamp( EyeAngles.pitch, -0f,
 			0f ) ); // Clamp the pitch of the eye angles to prevent the player from looking too far up or down
 		Transform.Rotation = Rotation.FromYaw( EyeAngles.yaw ); // Set the rotation of the player to the eye angles yaw
+
+		//DOOR USING
+		if (Input.Pressed("use"))
+        {
+			if (doorInRange.IsValid)
+			{
+				doorInRange.playerOpen(this);
+			}
+        }
 	}
 
 	protected override void OnFixedUpdate() // Called on every tick, e.g 50 times a second depending on Fixed Update Frequency of the game
